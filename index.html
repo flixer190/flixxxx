@@ -8,33 +8,35 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" href="logo-mark.svg" type="image/svg+xml">
 <style>
 /* ============================================================
    TOKENS
 ============================================================ */
 :root{
-  --bg:#060608;
-  --bg1:#0c0c12;
-  --bg2:#121219;
-  --bg3:#18181f;
-  --card:#16161e;
-  --card2:#1c1c26;
-  --border:rgba(255,255,255,.06);
-  --border2:rgba(255,255,255,.11);
-  --border3:rgba(255,255,255,.18);
-  --accent:#7c3aed;
-  --accent2:#9d5bf4;
-  --accent3:#c084fc;
+  --bg:#f7f9fc;
+  --bg1:#eef2f9;
+  --bg2:#e4eaf3;
+  --bg3:#dbe3f0;
+  --card:#ffffff;
+  --card2:#eef2f9;
+  --border:rgba(15,23,42,.08);
+  --border2:rgba(15,23,42,.14);
+  --border3:rgba(15,23,42,.22);
+  --accent:#2563eb;
+  --accent2:#3b82f6;
+  --accent3:#60a5fa;
   --red:#e8341a;
   --red2:#ff4d33;
-  --green:#22c55e;
+  --green:#16a34a;
   --wa:#25D366;
   --gold:#f59e0b;
   --sp:#1DB954;
   --yt:#FF0000;
-  --text:#f8f8ff;
-  --text2:rgba(248,248,255,.6);
-  --text3:rgba(248,248,255,.32);
+  --navy:#0f172a;
+  --text:#0f172a;
+  --text2:rgba(15,23,42,.62);
+  --text3:rgba(15,23,42,.4);
   --font:'DM Sans',system-ui,sans-serif;
   --display:'Syne',system-ui,sans-serif;
   --r:10px;--r2:16px;--r3:24px;--rf:999px;--t:.2s ease;
@@ -71,18 +73,19 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 ============================================================ */
 .hdr{position:sticky;top:0;z-index:999;padding:0 20px;transition:all var(--t)}
 .hdr-inner{display:flex;align-items:center;height:64px;gap:20px;max-width:1080px;margin:0 auto;border-bottom:1px solid var(--border)}
-.hdr.scrolled{background:rgba(6,6,8,.92);backdrop-filter:blur(20px)}
+.hdr.scrolled{background:rgba(247,249,252,.88);backdrop-filter:blur(20px)}
 .logo{display:flex;align-items:center;gap:10px;margin-right:auto;cursor:pointer}
-.logo-mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:16px;font-weight:800;color:#fff;flex-shrink:0}
-.logo-name{font-family:var(--display);font-size:20px;font-weight:800;color:#fff;letter-spacing:-.3px}
-.logo-name em{color:var(--accent3);font-style:normal}
+.logo-mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent3));display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.logo-mark svg{width:100%;height:100%}
+.logo-name{font-family:var(--display);font-size:20px;font-weight:800;color:var(--text);letter-spacing:-.3px}
+.logo-name em{color:var(--accent2);font-style:normal}
 .nav-links{display:flex;list-style:none;gap:2px}
 .nav-links a{font-size:13px;font-weight:500;color:var(--text2);padding:7px 14px;border-radius:var(--rf);transition:all var(--t)}
-.nav-links a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.nav-links a:hover{color:var(--text);background:rgba(15,23,42,.05)}
 .nav-cta{display:inline-flex;align-items:center;gap:7px;background:var(--wa);color:#fff;font-size:13px;font-weight:700;padding:9px 18px;border-radius:var(--rf);transition:all var(--t);white-space:nowrap}
 .nav-cta:hover{filter:brightness(1.1);transform:translateY(-1px)}
 .hbg{display:none;flex-direction:column;gap:5px;background:none;padding:6px;border-radius:8px}
-.bar{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all var(--t)}
+.bar{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--t)}
 
 /* ============================================================
    HERO
@@ -91,31 +94,31 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 
 /* Mesh background */
 .hero::before{content:'';position:absolute;inset:0;background:
-  radial-gradient(ellipse 70% 60% at 20% 30%,rgba(124,58,237,.18) 0%,transparent 60%),
-  radial-gradient(ellipse 50% 40% at 80% 70%,rgba(59,130,246,.12) 0%,transparent 55%),
-  radial-gradient(ellipse 40% 30% at 60% 10%,rgba(232,52,26,.08) 0%,transparent 50%);
+  radial-gradient(ellipse 70% 60% at 20% 30%,rgba(37,99,235,.10) 0%,transparent 60%),
+  radial-gradient(ellipse 50% 40% at 80% 70%,rgba(96,165,250,.14) 0%,transparent 55%),
+  radial-gradient(ellipse 40% 30% at 60% 10%,rgba(191,219,254,.35) 0%,transparent 50%);
   pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,var(--bg),transparent);pointer-events:none}
 
 .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);color:var(--accent3);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:var(--rf);margin-bottom:20px}
-.live-dot{width:6px;height:6px;border-radius:50%;background:var(--accent3);animation:pulse 2s ease-in-out infinite}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.28);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:var(--rf);margin-bottom:20px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-.hero h1{font-family:var(--display);font-size:clamp(40px,5.5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-1.5px;margin-bottom:20px;color:#fff}
-.hero h1 .hl{background:linear-gradient(135deg,var(--accent3),#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1{font-family:var(--display);font-size:clamp(40px,5.5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-1.5px;margin-bottom:20px;color:var(--text)}
+.hero h1 .hl{background:linear-gradient(135deg,var(--accent),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:17px;color:var(--text2);line-height:1.7;max-width:500px;margin-bottom:32px;font-weight:300}
-.hero-sub strong{color:#fff;font-weight:500}
+.hero-sub strong{color:var(--text);font-weight:500}
 .hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
-.hpill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid var(--border2);color:var(--text2);font-size:12px;font-weight:500;padding:6px 12px;border-radius:var(--rf)}
-.hpill i{color:var(--accent3);font-size:11px}
+.hpill{display:inline-flex;align-items:center;gap:6px;background:rgba(15,23,42,.04);border:1px solid var(--border2);color:var(--text2);font-size:12px;font-weight:500;padding:6px 12px;border-radius:var(--rf)}
+.hpill i{color:var(--accent);font-size:11px}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:var(--rf);font-weight:700;cursor:pointer;transition:all var(--t);font-family:var(--font);text-decoration:none}
-.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:14px 28px;font-size:15px;box-shadow:0 8px 32px rgba(124,58,237,.35)}
-.btn-primary:hover{filter:brightness(1.12);transform:translateY(-2px);box-shadow:0 12px 40px rgba(124,58,237,.5)}
-.btn-ghost{background:rgba(255,255,255,.07);border:1px solid var(--border2);color:#fff;padding:13px 26px;font-size:14px}
-.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:var(--border3)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:14px 28px;font-size:15px;box-shadow:0 8px 32px rgba(37,99,235,.35)}
+.btn-primary:hover{filter:brightness(1.12);transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,99,235,.5)}
+.btn-ghost{background:rgba(15,23,42,.04);border:1px solid var(--border2);color:var(--text);padding:13px 26px;font-size:14px}
+.btn-ghost:hover{background:rgba(15,23,42,.08);border-color:var(--border3)}
 .btn-wa{background:var(--wa);color:#fff;padding:14px 26px;font-size:15px}
 .btn-wa:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .btn-lg{padding:16px 36px;font-size:16px}
@@ -123,24 +126,24 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 
 /* HERO CARD */
 .hero-card{background:var(--card);border:1px solid var(--border2);border-radius:var(--r3);padding:28px;position:relative;overflow:hidden}
-.hero-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.2) 0%,transparent 70%);pointer-events:none}
-.hc-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.35);color:var(--accent3);font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:4px 10px;border-radius:var(--rf);margin-bottom:12px}
-.hc-title{font-family:var(--display);font-size:22px;font-weight:800;color:#fff;margin-bottom:6px}
+.hero-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.1) 0%,transparent 70%);pointer-events:none}
+.hc-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.3);color:var(--accent);font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:4px 10px;border-radius:var(--rf);margin-bottom:12px}
+.hc-title{font-family:var(--display);font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px}
 .hc-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
-.hc-price{font-family:var(--display);font-size:38px;font-weight:800;color:#fff;line-height:1}
+.hc-price{font-family:var(--display);font-size:38px;font-weight:800;color:var(--text);line-height:1}
 .hc-per{font-size:14px;color:var(--text2);font-weight:500}
 .hc-compare{font-size:12px;color:var(--text3);margin-bottom:6px}
 .hc-compare s{color:var(--text3)}
-.hc-save{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:#4ade80;font-size:12px;font-weight:700;padding:5px 11px;border-radius:var(--rf);margin-bottom:18px}
+.hc-save{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:#16a34a;font-size:12px;font-weight:700;padding:5px 11px;border-radius:var(--rf);margin-bottom:18px}
 .hc-list{list-style:none;margin-bottom:20px}
 .hc-list li{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--border)}
 .hc-list li:last-child{border-bottom:none}
-.hc-list li i{color:#4ade80;font-size:11px;flex-shrink:0}
+.hc-list li i{color:#16a34a;font-size:11px;flex-shrink:0}
 .hc-note{text-align:center;font-size:11px;color:var(--text3);margin-top:10px}
 
 /* SOCIAL PROOF TICKER */
-.spticker{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:var(--rf);padding:8px 14px;margin-top:18px;width:fit-content}
-.sp-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:pulse 1.6s ease-in-out infinite}
+.spticker{display:flex;align-items:center;gap:8px;background:rgba(15,23,42,.03);border:1px solid var(--border);border-radius:var(--rf);padding:8px 14px;margin-top:18px;width:fit-content}
+.sp-dot{width:6px;height:6px;border-radius:50%;background:#16a34a;flex-shrink:0;animation:pulse 1.6s ease-in-out infinite}
 #sptext{font-size:12px;color:var(--text2);font-weight:500}
 
 /* ============================================================
@@ -149,7 +152,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 .trust-bar{background:var(--bg1);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:14px 0}
 .trust-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 28px}
 .ti{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:500;color:var(--text2)}
-.ti i{color:var(--accent3);font-size:13px}
+.ti i{color:var(--accent);font-size:13px}
 .tsep{width:1px;height:18px;background:var(--border2)}
 
 /* ============================================================
@@ -160,14 +163,14 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 .chtrack{display:inline-flex;gap:10px;animation:chs 30s linear infinite}
 @keyframes chs{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ch{flex-shrink:0;padding:6px 14px;background:var(--card2);border:1px solid var(--border2);border-radius:6px;font-size:11px;font-weight:700;color:var(--text2);white-space:nowrap}
-.ch.accent{border-color:rgba(124,58,237,.3);color:var(--accent3);background:rgba(124,58,237,.08)}
+.ch.accent{border-color:rgba(37,99,235,.3);color:var(--accent);background:rgba(37,99,235,.08)}
 
 /* ============================================================
    SECTION HEADERS
 ============================================================ */
 .sh{text-align:center;margin-bottom:52px}
-.sh-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent3);background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);padding:5px 14px;border-radius:var(--rf);margin-bottom:14px}
-.sh h2{font-family:var(--display);font-size:clamp(28px,4vw,46px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1px;margin-bottom:12px}
+.sh-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.2);padding:5px 14px;border-radius:var(--rf);margin-bottom:14px}
+.sh h2{font-family:var(--display);font-size:clamp(28px,4vw,46px);font-weight:800;color:var(--text);line-height:1.1;letter-spacing:-1px;margin-bottom:12px}
 .sh p{font-size:16px;color:var(--text2);max-width:520px;margin:0 auto;line-height:1.7;font-weight:300}
 
 /* ============================================================
@@ -176,76 +179,90 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 .pkgsec{padding:100px 0;background:var(--bg)}
 .pkg-nav{display:flex;justify-content:center;gap:8px;margin-bottom:52px;flex-wrap:wrap}
 .pnav-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:var(--rf);font-size:13px;font-weight:600;cursor:pointer;transition:all var(--t);background:var(--card);border:1px solid var(--border2);color:var(--text2)}
-.pnav-btn.active,.pnav-btn:hover{color:#fff;border-color:var(--border3);background:var(--card2)}
-.pnav-btn[data-sec="iptv"].active{border-color:rgba(124,58,237,.4);background:rgba(124,58,237,.12);color:var(--accent3)}
-.pnav-btn[data-sec="youtube"].active{border-color:rgba(255,0,0,.35);background:rgba(255,0,0,.08);color:#ff6b6b}
-.pnav-btn[data-sec="spotify"].active{border-color:rgba(29,185,84,.35);background:rgba(29,185,84,.08);color:#4ade80}
+.pnav-btn.active,.pnav-btn:hover{color:var(--text);border-color:var(--border3);background:var(--card2)}
+.pnav-btn[data-sec="iptv"].active{border-color:rgba(37,99,235,.4);background:rgba(37,99,235,.1);color:var(--accent)}
+.pnav-btn[data-sec="youtube"].active{border-color:rgba(255,0,0,.35);background:rgba(255,0,0,.08);color:#dc2626}
+.pnav-btn[data-sec="spotify"].active{border-color:rgba(29,185,84,.35);background:rgba(29,185,84,.08);color:#16a34a}
+.pnav-btn[data-sec="netflix"].active{border-color:rgba(229,9,20,.35);background:rgba(229,9,20,.08);color:#dc2626}
+.pnav-btn[data-sec="crunchyroll"].active{border-color:rgba(244,117,33,.4);background:rgba(244,117,33,.1);color:#c2410c}
+.pnav-btn[data-sec="prime"].active{border-color:rgba(0,168,225,.4);background:rgba(0,168,225,.1);color:#0369a1}
 
 .service-block{margin-bottom:80px}
 .service-hdr{display:flex;align-items:center;gap:16px;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
 .svc-ico{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;flex-shrink:0}
-.ico-iptv{background:linear-gradient(135deg,var(--accent),#4f46e5)}
+.ico-iptv{background:linear-gradient(135deg,var(--accent),var(--accent2))}
 .ico-yt{background:linear-gradient(135deg,#FF0000,#cc0000)}
 .ico-sp{background:linear-gradient(135deg,#1DB954,#169c47)}
-.svc-title{font-family:var(--display);font-size:24px;font-weight:800;color:#fff}
+.ico-nf{background:linear-gradient(135deg,#e50914,#b0060f)}
+.ico-cr{background:linear-gradient(135deg,#f47521,#e2571a)}
+.ico-pv{background:linear-gradient(135deg,#00a8e1,#146eb4)}
+.svc-title{font-family:var(--display);font-size:24px;font-weight:800;color:var(--text)}
 .svc-sub{font-size:13px;color:var(--text2);margin-top:3px}
 .svc-badge{margin-left:auto;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:5px 12px;border-radius:var(--rf);border:1px solid;flex-shrink:0}
-.badge-hot{background:rgba(124,58,237,.12);border-color:rgba(124,58,237,.3);color:var(--accent3)}
+.badge-hot{background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.3);color:var(--accent)}
 
 .cards-grid{display:grid;gap:14px}
 .grid-1{grid-template-columns:1fr;max-width:400px;margin:0 auto}
 .grid-3{grid-template-columns:repeat(3,1fr);max-width:780px;margin:0 auto}
+.grid-4{grid-template-columns:repeat(4,1fr);max-width:980px;margin:0 auto}
 
 .pkg-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:20px;position:relative;transition:all var(--t)}
 .pkg-card:hover{border-color:var(--border2);transform:translateY(-2px)}
-.pkg-card.featured{border-color:rgba(124,58,237,.3);background:linear-gradient(135deg,var(--card),rgba(124,58,237,.05))}
-.pkg-card.popular{border-color:rgba(255,255,255,.15)}
+.pkg-card.featured{border-color:rgba(37,99,235,.3);background:linear-gradient(135deg,var(--card),rgba(37,99,235,.05))}
+.pkg-card.popular{border-color:rgba(15,23,42,.16)}
 
 .card-ribbon{position:absolute;top:16px;right:16px;font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 9px;border-radius:var(--rf)}
-.ribbon-purple{background:rgba(124,58,237,.2);color:var(--accent3)}
-.ribbon-green{background:rgba(34,197,94,.15);color:#4ade80}
-.ribbon-red{background:rgba(255,100,100,.15);color:#ff8080}
+.ribbon-purple{background:rgba(37,99,235,.14);color:var(--accent)}
+.ribbon-green{background:rgba(34,197,94,.15);color:#16a34a}
+.ribbon-red{background:rgba(255,100,100,.15);color:#dc2626}
+.ribbon-orange{background:rgba(234,88,12,.14);color:#c2410c}
+.ribbon-blue{background:rgba(3,105,161,.14);color:#0369a1}
 
 .pop-tag{font-size:10px;font-weight:700;color:var(--gold);margin-bottom:6px;display:flex;align-items:center;gap:4px}
-.pkg-name{font-family:var(--display);font-size:16px;font-weight:800;color:#fff;margin-bottom:10px}
-.pkg-price-big{font-family:var(--display);font-size:26px;font-weight:800;color:#fff;line-height:1;display:inline}
+.pkg-name{font-family:var(--display);font-size:16px;font-weight:800;color:var(--text);margin-bottom:10px}
+.pkg-price-big{font-family:var(--display);font-size:26px;font-weight:800;color:var(--text);line-height:1;display:inline}
 .pkg-price-was{font-size:12px;color:var(--text3);text-decoration:line-through;margin-left:6px;vertical-align:middle}
 .pkg-mo{font-size:11px;color:var(--text3);margin-top:3px;margin-bottom:12px}
 
-.savings-box{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r);padding:9px 11px;margin-bottom:12px}
+.savings-box{background:rgba(15,23,42,.03);border:1px solid var(--border);border-radius:var(--r);padding:9px 11px;margin-bottom:12px}
 .sv-row{display:flex;justify-content:space-between;font-size:11px;color:var(--text2);padding:2px 0}
-.sv-row.good{font-weight:600;color:#fff}
+.sv-row.good{font-weight:600;color:var(--text)}
 .sv-val-bad{color:var(--text3);text-decoration:line-through}
-.sv-val-good{color:#4ade80;font-weight:700}
-.sv-total{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#4ade80;margin-top:7px;padding-top:7px;border-top:1px solid var(--border)}
+.sv-val-good{color:#16a34a;font-weight:700}
+.sv-total{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#16a34a;margin-top:7px;padding-top:7px;border-top:1px solid var(--border)}
 
 .pkg-features{list-style:none;margin-bottom:20px}
 .pkg-features li{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text2);padding:4px 0;border-bottom:1px solid var(--border);font-weight:400}
 .pkg-features li:last-child{border-bottom:none}
 .pkg-features li::before{content:'✓';font-weight:800;font-size:12px;flex-shrink:0}
-.fc-purple::before{color:var(--accent3)}
-.fc-green::before{color:#4ade80}
-.fc-red::before{color:#ff8080}
+.fc-purple::before{color:var(--accent)}
+.fc-green::before{color:#16a34a}
+.fc-red::before{color:#dc2626}
+.fc-orange::before{color:#c2410c}
+.fc-blue::before{color:#0369a1}
 
 .add-btn{width:100%;padding:11px;border:none;border-radius:var(--r);font-size:12px;font-weight:700;cursor:pointer;transition:all var(--t);font-family:var(--font);color:#fff;display:flex;align-items:center;justify-content:center;gap:6px}
 .add-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
 .add-btn.added{opacity:.6}
 .btn-iptv{background:linear-gradient(135deg,var(--accent),var(--accent2))}
 .btn-yt{background:#FF0000}
+.btn-nf{background:#E50914}
+.btn-cr{background:#F47521}
+.btn-pv{background:#00A8E1}
 .btn-sp{background:#1DB954}
 
 /* ============================================================
    WHY US
 ============================================================ */
 .why-sec{padding:100px 0;background:var(--bg1);position:relative;overflow:hidden}
-.why-sec::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.07) 0%,transparent 65%);pointer-events:none}
+.why-sec::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.07) 0%,transparent 65%);pointer-events:none}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .why-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r3);padding:28px;transition:all var(--t);position:relative;overflow:hidden}
-.why-card:hover{border-color:rgba(124,58,237,.25);transform:translateY(-3px)}
+.why-card:hover{border-color:rgba(37,99,235,.25);transform:translateY(-3px)}
 .why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity var(--t)}
 .why-card:hover::before{opacity:1}
 .why-ico{font-size:32px;margin-bottom:16px;display:block}
-.why-title{font-family:var(--display);font-size:18px;font-weight:800;color:#fff;margin-bottom:8px}
+.why-title{font-family:var(--display);font-size:18px;font-weight:800;color:var(--text);margin-bottom:8px}
 .why-text{font-size:14px;color:var(--text2);line-height:1.65;font-weight:300}
 
 /* ============================================================
@@ -254,25 +271,25 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 .compare-sec{padding:100px 0;background:var(--bg)}
 .compare-table{width:100%;border-collapse:collapse;border-radius:var(--r3);overflow:hidden}
 .compare-table th{background:var(--card2);padding:16px 20px;text-align:left;font-family:var(--display);font-size:13px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border2)}
-.compare-table th.ours{background:rgba(124,58,237,.15);color:var(--accent3)}
+.compare-table th.ours{background:rgba(37,99,235,.12);color:var(--accent)}
 .compare-table td{padding:14px 20px;font-size:14px;color:var(--text2);border-bottom:1px solid var(--border)}
 .compare-table tr:last-child td{border-bottom:none}
-.compare-table td.ours{background:rgba(124,58,237,.05);font-weight:600;color:#fff}
-.compare-table tr:hover td{background:rgba(255,255,255,.02)}
-.check-yes{color:#4ade80;font-size:16px}
+.compare-table td.ours{background:rgba(37,99,235,.04);font-weight:600;color:var(--text)}
+.compare-table tr:hover td{background:rgba(15,23,42,.02)}
+.check-yes{color:#16a34a;font-size:16px}
 .check-no{color:var(--text3);font-size:16px}
-.price-red{color:#ff8080;text-decoration:line-through;font-size:13px}
-.price-green{color:#4ade80;font-weight:700}
+.price-red{color:#dc2626;text-decoration:line-through;font-size:13px}
+.price-green{color:#16a34a;font-weight:700}
 
 /* ============================================================
    HOW IT WORKS
 ============================================================ */
 .how-sec{padding:100px 0;background:var(--bg1)}
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
-.how-grid::before{content:'';position:absolute;top:32px;left:calc(16.6% + 16px);right:calc(16.6% + 16px);height:1px;background:linear-gradient(90deg,rgba(124,58,237,.4),rgba(124,58,237,.4));pointer-events:none}
+.how-grid::before{content:'';position:absolute;top:32px;left:calc(16.6% + 16px);right:calc(16.6% + 16px);height:1px;background:linear-gradient(90deg,rgba(37,99,235,.4),rgba(37,99,235,.4));pointer-events:none}
 .how-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r3);padding:28px 24px;text-align:center;position:relative;z-index:1}
-.how-num{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:22px;font-weight:800;color:#fff;margin:0 auto 20px;box-shadow:0 8px 24px rgba(124,58,237,.35)}
-.how-card h4{font-family:var(--display);font-size:17px;font-weight:800;color:#fff;margin-bottom:8px}
+.how-num{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:22px;font-weight:800;color:#fff;margin:0 auto 20px;box-shadow:0 8px 24px rgba(37,99,235,.35)}
+.how-card h4{font-family:var(--display);font-size:17px;font-weight:800;color:var(--text);margin-bottom:8px}
 .how-card p{font-size:14px;color:var(--text2);line-height:1.65;font-weight:300}
 
 /* ============================================================
@@ -283,7 +300,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 .rev-track{display:flex;gap:16px;animation:revs 35s linear infinite;width:max-content;padding:8px 20px}
 @keyframes revs{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .rev-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:22px;width:280px;flex-shrink:0;transition:border-color var(--t)}
-.rev-card:hover{border-color:rgba(124,58,237,.25)}
+.rev-card:hover{border-color:rgba(37,99,235,.25)}
 .rev-stars{color:var(--gold);font-size:13px;margin-bottom:10px;letter-spacing:1px}
 .rev-text{font-size:14px;color:var(--text2);line-height:1.65;margin-bottom:14px;font-weight:300}
 .rev-name{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.5px}
@@ -296,9 +313,9 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 .faq-list{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:6px}
 .faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:border-color var(--t)}
 .faq-item:hover{border-color:var(--border2)}
-.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:transparent;border:none;color:#fff;font-size:15px;font-weight:600;cursor:pointer;text-align:left;gap:12px;font-family:var(--font);transition:background var(--t)}
-.faq-q:hover{background:rgba(255,255,255,.03)}
-.faq-q i{color:var(--accent3);font-size:13px;flex-shrink:0;transition:transform var(--t)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:transparent;border:none;color:var(--text);font-size:15px;font-weight:600;cursor:pointer;text-align:left;gap:12px;font-family:var(--font);transition:background var(--t)}
+.faq-q:hover{background:rgba(15,23,42,.03)}
+.faq-q i{color:var(--accent);font-size:13px;flex-shrink:0;transition:transform var(--t)}
 .faq-q[aria-expanded="true"] i{transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 22px}
 .faq-a.open{max-height:300px;padding:0 22px 18px}
@@ -308,8 +325,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
    FINAL CTA
 ============================================================ */
 .cta-sec{padding:120px 0;background:var(--bg);text-align:center;position:relative;overflow:hidden}
-.cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(124,58,237,.15) 0%,transparent 65%);pointer-events:none}
-.cta-sec h2{font-family:var(--display);font-size:clamp(32px,5vw,56px);font-weight:800;color:#fff;margin-bottom:14px;position:relative;letter-spacing:-1px}
+.cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(37,99,235,.1) 0%,transparent 65%);pointer-events:none}
+.cta-sec h2{font-family:var(--display);font-size:clamp(32px,5vw,56px);font-weight:800;color:var(--text);margin-bottom:14px;position:relative;letter-spacing:-1px}
 .cta-sec p{font-size:17px;color:var(--text2);margin-bottom:36px;position:relative;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.65;font-weight:300}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
 .cta-note{font-size:12px;color:var(--text3);margin-top:18px;position:relative}
@@ -317,15 +334,17 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 /* ============================================================
    FOOTER
 ============================================================ */
-.footer{background:#040406;border-top:1px solid var(--border);padding:48px 0 24px}
+.footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);padding:48px 0 24px}
+.footer .logo-name{color:#fff}
+.footer .logo-name em{color:var(--accent3)}
 .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap;margin-bottom:32px}
-.footer-brand p{font-size:13px;color:var(--text3);margin-top:10px;max-width:220px;line-height:1.6;font-weight:300}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,.5);margin-top:10px;max-width:220px;line-height:1.6;font-weight:300}
 .footer-links{display:flex;flex-direction:column;gap:8px}
-.footer-links a{font-size:13px;color:var(--text3);transition:color var(--t)}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.5);transition:color var(--t)}
 .footer-links a:hover{color:#fff}
 .footer-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;padding:11px 20px;border-radius:var(--rf);font-weight:700;font-size:13px;transition:all var(--t)}
 .footer-wa:hover{filter:brightness(1.08)}
-.footer-bottom{border-top:1px solid var(--border);padding-top:18px;text-align:center;font-size:12px;color:var(--text3)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;text-align:center;font-size:12px;color:rgba(255,255,255,.4)}
 
 /* ============================================================
    WA FLOAT
@@ -338,40 +357,40 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 /* ============================================================
    TOAST
 ============================================================ */
-.toast{position:fixed;bottom:90px;right:24px;background:var(--card2);border:1px solid var(--border2);border-left:3px solid #4ade80;color:#fff;padding:12px 18px;border-radius:var(--r2);font-size:13px;font-weight:600;z-index:9999;transform:translateX(130%);transition:transform .35s cubic-bezier(.4,0,.2,1);max-width:260px;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.toast{position:fixed;bottom:90px;right:24px;background:var(--card);border:1px solid var(--border2);border-left:3px solid #16a34a;color:var(--text);padding:12px 18px;border-radius:var(--r2);font-size:13px;font-weight:600;z-index:9999;transform:translateX(130%);transition:transform .35s cubic-bezier(.4,0,.2,1);max-width:260px;box-shadow:0 8px 32px rgba(15,23,42,.15)}
 .toast.show{transform:translateX(0)}
 
 /* ============================================================
    MODALS
 ============================================================ */
-.mov{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:1000;display:flex;align-items:flex-end;justify-content:center;padding:0}
+.mov{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);z-index:1000;display:flex;align-items:flex-end;justify-content:center;padding:0}
 @media(min-width:600px){.mov{align-items:center}}
-.mbox{background:var(--card2);border:1px solid var(--border2);border-radius:24px 24px 0 0;width:100%;max-width:480px;overflow:hidden;animation:slideUp .3s cubic-bezier(.4,0,.2,1)}
+.mbox{background:var(--card);border:1px solid var(--border2);border-radius:24px 24px 0 0;width:100%;max-width:480px;overflow:hidden;animation:slideUp .3s cubic-bezier(.4,0,.2,1)}
 @media(min-width:600px){.mbox{border-radius:var(--r3)}}
 @keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
-.mhead{background:rgba(124,58,237,.12);padding:18px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
-.mhead h2{font-family:var(--display);font-size:18px;font-weight:800;color:#fff}
-.mclose{background:rgba(255,255,255,.08);border:none;color:var(--text2);font-size:18px;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--t)}
-.mclose:hover{background:rgba(255,255,255,.15);color:#fff}
+.mhead{background:rgba(37,99,235,.08);padding:18px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.mhead h2{font-family:var(--display);font-size:18px;font-weight:800;color:var(--text)}
+.mclose{background:rgba(15,23,42,.06);border:none;color:var(--text2);font-size:18px;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--t)}
+.mclose:hover{background:rgba(15,23,42,.1);color:var(--text)}
 .mbody{padding:22px;max-height:80vh;overflow-y:auto}
 
 /* Order modal elements */
-.m-order-items{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:14px}
+.m-order-items{background:rgba(15,23,42,.03);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:14px}
 .m-order-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;gap:10px}
 .m-order-row+.m-order-row{border-top:1px solid var(--border)}
-.m-order-name{font-size:14px;font-weight:600;color:#fff}
+.m-order-name{font-size:14px;font-weight:600;color:var(--text)}
 .m-order-dur{font-size:11px;color:var(--text3);margin-top:2px}
-.m-order-price{font-family:var(--display);font-size:20px;font-weight:800;color:#fff;white-space:nowrap;flex-shrink:0}
+.m-order-price{font-family:var(--display);font-size:20px;font-weight:800;color:var(--text);white-space:nowrap;flex-shrink:0}
 .m-order-total{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
 .m-order-total span{font-size:11px;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.5px}
 .m-order-total strong{font-family:var(--display);font-size:20px;font-weight:800;color:#fff}
-.m-savings{display:flex;align-items:center;gap:8px;background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.18);border-radius:var(--r);padding:10px 13px;margin-bottom:14px;font-size:13px;color:#4ade80;font-weight:600}
-.m-info{display:flex;align-items:flex-start;gap:8px;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r);padding:10px 12px;margin-bottom:16px;font-size:12px;color:var(--text2);line-height:1.5}
+.m-savings{display:flex;align-items:center;gap:8px;background:rgba(22,163,74,.07);border:1px solid rgba(22,163,74,.18);border-radius:var(--r);padding:10px 13px;margin-bottom:14px;font-size:13px;color:#16a34a;font-weight:600}
+.m-info{display:flex;align-items:flex-start;gap:8px;background:rgba(15,23,42,.03);border:1px solid var(--border);border-radius:var(--r);padding:10px 12px;margin-bottom:16px;font-size:12px;color:var(--text2);line-height:1.5}
 .m-info i{color:var(--text3);flex-shrink:0;margin-top:2px}
 .pay-lbl{font-size:12px;font-weight:700;color:var(--text2);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px}
 .pay-opts{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
-.popt{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;background:rgba(255,255,255,.03);font-size:14px;font-weight:500;color:#fff;transition:all var(--t)}
-.popt:hover{border-color:rgba(124,58,237,.4);background:rgba(124,58,237,.06)}
+.popt{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;background:rgba(15,23,42,.02);font-size:14px;font-weight:500;color:var(--text);transition:all var(--t)}
+.popt:hover{border-color:rgba(37,99,235,.35);background:rgba(37,99,235,.05)}
 .popt input{accent-color:var(--accent)}
 .popt i{font-size:16px;color:var(--text3)}
 .m-send{width:100%;padding:15px;background:var(--wa);color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font);transition:all var(--t)}
@@ -380,19 +399,19 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 
 /* Upsell popup */
 .upsell-box{max-width:420px}
-.up-head{background:rgba(124,58,237,.1);padding:24px 20px;text-align:center;border-bottom:1px solid var(--border)}
+.up-head{background:rgba(37,99,235,.08);padding:24px 20px;text-align:center;border-bottom:1px solid var(--border)}
 .up-ico{font-size:36px;margin-bottom:8px;display:block}
-.up-head h3{font-family:var(--display);font-size:19px;font-weight:800;color:#fff;margin-bottom:6px}
+.up-head h3{font-family:var(--display);font-size:19px;font-weight:800;color:var(--text);margin-bottom:6px}
 .up-head p{font-size:13px;color:var(--text2);line-height:1.5;font-weight:300}
 .up-opts{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
-.up-radio{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;transition:all var(--t);background:rgba(255,255,255,.02)}
-.up-radio:hover,.up-radio.sel{border-color:rgba(124,58,237,.35);background:rgba(124,58,237,.06)}
+.up-radio{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;transition:all var(--t);background:rgba(15,23,42,.02)}
+.up-radio:hover,.up-radio.sel{border-color:rgba(37,99,235,.32);background:rgba(37,99,235,.05)}
 .up-radio input{accent-color:var(--accent)}
-.up-radio-name{flex:1;font-size:14px;font-weight:600;color:#fff}
+.up-radio-name{flex:1;font-size:14px;font-weight:600;color:var(--text)}
 .up-radio-sub{font-size:11px;color:var(--text2);margin-top:2px}
-.up-price{font-family:var(--display);font-size:18px;font-weight:800;color:#fff;white-space:nowrap}
+.up-price{font-family:var(--display);font-size:18px;font-weight:800;color:var(--text);white-space:nowrap}
 .up-was{font-size:11px;color:var(--text3);text-decoration:line-through;display:block;text-align:right}
-.up-save-pill{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2);color:#4ade80;font-size:12px;font-weight:700;padding:8px 14px;border-radius:var(--rf);margin:12px 16px}
+.up-save-pill{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(22,163,74,.07);border:1px solid rgba(22,163,74,.2);color:#16a34a;font-size:12px;font-weight:700;padding:8px 14px;border-radius:var(--rf);margin:12px 16px}
 .up-actions{padding:0 16px 18px;display:flex;flex-direction:column;gap:8px}
 .up-accept{width:100%;padding:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font);transition:all var(--t)}
 .up-accept:hover{filter:brightness(1.1)}
@@ -401,20 +420,20 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 /* Snackbar */
 .snackbar{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);z-index:1500;width:calc(100% - 32px);max-width:560px;transition:transform .4s cubic-bezier(.4,0,.2,1)}
 .snackbar.visible{transform:translateX(-50%) translateY(0)}
-.sb-inner{background:var(--card2);border:1px solid var(--border2);border-left:3px solid var(--wa);border-radius:var(--r2);padding:13px 15px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.sb-inner{background:var(--card);border:1px solid var(--border2);border-left:3px solid var(--wa);border-radius:var(--r2);padding:13px 15px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(15,23,42,.18)}
 .sb-ico{font-size:22px;flex-shrink:0}
 .sb-txt{flex:1;min-width:0}
-.sb-txt strong{display:block;font-size:12px;font-weight:700;color:#fff;margin-bottom:1px}
+.sb-txt strong{display:block;font-size:12px;font-weight:700;color:var(--text);margin-bottom:1px}
 .sb-txt span{font-size:11px;color:var(--text2)}
 .sb-btn{display:inline-flex;align-items:center;gap:5px;background:var(--wa);color:#fff;border:none;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0;cursor:pointer;font-family:var(--font);text-decoration:none}
 .sb-close{background:transparent;border:none;color:var(--text3);font-size:18px;cursor:pointer;flex-shrink:0;line-height:1}
 
 /* Exit popup */
-.exit-box{text-align:center;max-width:380px;padding:32px 24px;position:relative;background:var(--card2)}
+.exit-box{text-align:center;max-width:380px;padding:32px 24px;position:relative;background:var(--card)}
 .exit-ico{font-size:44px;margin-bottom:10px}
-.exit-bdg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:var(--rf);background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);color:var(--accent3);margin-bottom:12px}
-.exit-box h3{font-family:var(--display);font-size:22px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.2}
-.exit-box h3 span{color:var(--accent3)}
+.exit-bdg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:var(--rf);background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.28);color:var(--accent);margin-bottom:12px}
+.exit-box h3{font-family:var(--display);font-size:22px;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2}
+.exit-box h3 span{color:var(--accent)}
 .exit-box p{font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:20px;font-weight:300}
 .exit-dis{background:transparent;border:none;color:var(--text3);font-size:12px;cursor:pointer;text-decoration:underline;padding:8px;font-family:var(--font);display:block;margin:8px auto 0}
 
@@ -430,13 +449,13 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr}
   .hero-card{display:none}
-  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}
   .why-grid{grid-template-columns:1fr}
   .how-grid{grid-template-columns:1fr}
   .how-grid::before{display:none}
   .compare-table{font-size:12px}
 }
-@media(max-width:520px){.grid-3{grid-template-columns:1fr}}
+@media(max-width:520px){.grid-3,.grid-4{grid-template-columns:1fr}}
 @media(max-width:768px){
   .nav-links{display:none}
   .nav-links.open{display:flex;position:fixed;left:0;top:0;flex-direction:column;background:var(--bg1);border-right:1px solid var(--border);width:72%;height:100vh;padding:80px 20px 40px;z-index:990;gap:0}
@@ -475,7 +494,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
 <header class="hdr" id="hdr">
   <div class="hdr-inner">
     <div class="logo" onclick="scrollTo(0,0)">
-      <div class="logo-mark">F</div>
+      <div class="logo-mark"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="34,28 34,72 66,50" fill="#fff"/><path d="M70 38 A18 18 0 0 1 70 62" stroke="rgba(255,255,255,.85)" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M79 29 A31 31 0 0 1 79 71" stroke="rgba(255,255,255,.5)" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div>
       <div class="logo-name">Flix<em>TV</em></div>
     </div>
     <ul class="nav-links" id="navLinks">
@@ -498,9 +517,9 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-eyebrow"><span class="live-dot"></span> België</div>
+        <div class="hero-eyebrow"><span class="live-dot"></span> België &amp; Nederland</div>
         <h1>Alles wat je wil<br>kijken op <span class="hl">1 plek.</span></h1>
-        <p class="hero-sub">Films, series, live sport en alle zenders — plus <strong>Spotify & YouTube Premium</strong> zonder reclame. Vanaf €75/jaar.</p>
+        <p class="hero-sub">Films, series, live sport en alle zenders vanaf <strong>€75/jaar</strong>. Spotify, YouTube, Netflix & meer apart bij te bestellen — ook zonder reclame.</p>
         <div class="hero-pills">
           <span class="hpill"><i class="fas fa-check-circle"></i> Geen abonnement</span>
           <span class="hpill"><i class="fas fa-check-circle"></i> Geen domiciliëring</span>
@@ -580,6 +599,9 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
       <button class="pnav-btn active" data-sec="iptv" onclick="scrollToSec('iptv',this)"><i class="fas fa-tv"></i> IPTV</button>
       <button class="pnav-btn" data-sec="youtube" onclick="scrollToSec('youtube',this)"><i class="fab fa-youtube"></i> YouTube</button>
       <button class="pnav-btn" data-sec="spotify" onclick="scrollToSec('spotify',this)"><i class="fab fa-spotify"></i> Spotify</button>
+      <button class="pnav-btn" data-sec="netflix" onclick="scrollToSec('netflix',this)"><i class="fas fa-film"></i> Netflix</button>
+      <button class="pnav-btn" data-sec="crunchyroll" onclick="scrollToSec('crunchyroll',this)"><i class="fas fa-dragon"></i> Crunchyroll</button>
+      <button class="pnav-btn" data-sec="prime" onclick="scrollToSec('prime',this)"><i class="fab fa-amazon"></i> Prime Video</button>
     </div>
 
     <!-- IPTV -->
@@ -641,7 +663,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
             <li>Achtergrond afspelen</li>
             <li>Video's downloaden</li>
           </ul>
-          <button class="add-btn btn-yt add-to-cart" data-product="YouTube Individueel" data-price=49" data-retail="167.88" data-dur="12 maanden">
+          <button class="add-btn btn-yt add-to-cart" data-product="YouTube Individueel" data-price="49" data-retail="167.88" data-dur="12 maanden">
             <i class="fas fa-shopping-bag"></i> Toevoegen
           </button>
         </div>
@@ -649,11 +671,11 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
           <div class="pop-tag">⭐ Populairste keuze</div>
           <div class="card-ribbon ribbon-green">SAMEN</div>
           <div class="pkg-name">Duo</div>
-          <div><span class="pkg-price-big">€69,00</span><span class="pkg-price-was">€249,88</span></div>
-          <div class="pkg-mo">€2,88/maand p.p. · 2 accounts</div>
+          <div><span class="pkg-price-big">€79,00</span><span class="pkg-price-was">€249,88</span></div>
+          <div class="pkg-mo">€3,29/maand p.p. · 2 accounts</div>
           <div class="savings-box">
             <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€249,88</span></div>
-            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€69,00</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€79,00</span></div>
             <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€170,88</strong></div>
           </div>
           <ul class="pkg-features fc-red">
@@ -662,7 +684,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
             <li>Geen reclame</li>
             <li>Achtergrond afspelen</li>
           </ul>
-          <button class="add-btn btn-yt add-to-cart" data-product="YouTube Duo" data-price="69" data-retail="249.88" data-dur="12 maanden">
+          <button class="add-btn btn-yt add-to-cart" data-product="YouTube Duo" data-price="79" data-retail="249.88" data-dur="12 maanden">
             <i class="fas fa-shopping-bag"></i> Toevoegen
           </button>
         </div>
@@ -694,6 +716,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
       <div class="service-hdr">
         <div class="svc-ico ico-sp"><i class="fab fa-spotify"></i></div>
         <div><div class="svc-title">Spotify Premium</div><div class="svc-sub">Luister onbeperkt zonder reclame op je eigen account</div></div>
+        <div class="svc-badge badge-hot">🏆 Bestseller</div>
       </div>
       <div class="cards-grid grid-3">
         <div class="pkg-card">
@@ -720,12 +743,12 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
           <div class="pop-tag">⭐ Populairste keuze</div>
           <div class="card-ribbon ribbon-green">SAMEN</div>
           <div class="pkg-name">Duo</div>
-          <div><span class="pkg-price-big">€69,00</span><span class="pkg-price-was">€215,88</span></div>
-          <div class="pkg-mo">€2,88/maand p.p. · 2 accounts</div>
+          <div><span class="pkg-price-big">€79,00</span><span class="pkg-price-was">€215,88</span></div>
+          <div class="pkg-mo">€3,29/maand p.p. · 2 accounts</div>
           <div class="savings-box">
             <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€215,88</span></div>
-            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€69,00</span></div>
-            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€146,88</strong></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€79,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€136,88</strong></div>
           </div>
           <ul class="pkg-features fc-green">
             <li>12 maanden / 2 accounts</li>
@@ -733,19 +756,19 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
             <li>Geen reclame</li>
             <li>Offline luisteren</li>
           </ul>
-          <button class="add-btn btn-sp add-to-cart" data-product="Spotify Duo" data-price="69" data-retail="215.88" data-dur="12 maanden">
+          <button class="add-btn btn-sp add-to-cart" data-product="Spotify Duo" data-price="79" data-retail="215.88" data-dur="12 maanden">
             <i class="fas fa-shopping-bag"></i> Toevoegen
           </button>
         </div>
         <div class="pkg-card">
           <div class="card-ribbon ribbon-green">VOORDELIGST</div>
           <div class="pkg-name">Familie</div>
-          <div><span class="pkg-price-big">€109,00</span><span class="pkg-price-was">€263,88</span></div>
-          <div class="pkg-mo">€1,51/maand p.p. · 6 accounts</div>
+          <div><span class="pkg-price-big">€119,00</span><span class="pkg-price-was">€263,88</span></div>
+          <div class="pkg-mo">€1,65/maand p.p. · 6 accounts</div>
           <div class="savings-box">
             <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€263,88</span></div>
-            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€109,00</span></div>
-            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€154,88</strong></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€119,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€144,88</strong></div>
           </div>
           <ul class="pkg-features fc-green">
             <li>12 maanden / 6 accounts</li>
@@ -753,8 +776,200 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
             <li>Geen reclame</li>
             <li>Offline luisteren</li>
           </ul>
-          <button class="add-btn btn-sp add-to-cart" data-product="Spotify Familie" data-price="109" data-retail="263.88" data-dur="12 maanden">
+          <button class="add-btn btn-sp add-to-cart" data-product="Spotify Familie" data-price="119" data-retail="263.88" data-dur="12 maanden">
             <i class="fas fa-shopping-bag"></i> Toevoegen
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- NETFLIX -->
+    <div class="service-block fade-up" id="sec-netflix">
+      <div class="service-hdr">
+        <div class="svc-ico ico-nf"><i class="fas fa-film"></i></div>
+        <div><div class="svc-title">Netflix</div><div class="svc-sub">Films, series & originals — in HD/4K op je eigen account</div></div>
+      </div>
+      <div class="cards-grid grid-4">
+        <div class="pkg-card">
+          <div class="card-ribbon ribbon-red">−24%</div>
+          <div class="pkg-name">Mobile</div>
+          <div><span class="pkg-price-big">€55,00</span><span class="pkg-price-was">€71,88</span></div>
+          <div class="pkg-mo">€4,58/maand · 1 scherm</div>
+          <div class="savings-box">
+            <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€71,88</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€55,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€16,88</strong></div>
+          </div>
+          <ul class="pkg-features fc-red">
+            <li>12 maanden / 1 scherm</li>
+            <li>Mobiel & tablet</li>
+            <li>SD kwaliteit</li>
+            <li>Eigen account</li>
+          </ul>
+          <button class="add-btn btn-nf add-to-cart" data-product="Netflix Mobile" data-price="55" data-retail="71.88" data-dur="12 maanden">
+            <i class="fas fa-shopping-bag"></i> Toevoegen
+          </button>
+        </div>
+        <div class="pkg-card">
+          <div class="card-ribbon ribbon-red">−28%</div>
+          <div class="pkg-name">Basic HD</div>
+          <div><span class="pkg-price-big">€69,00</span><span class="pkg-price-was">€95,88</span></div>
+          <div class="pkg-mo">€5,75/maand · 1 scherm</div>
+          <div class="savings-box">
+            <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€95,88</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€69,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€26,88</strong></div>
+          </div>
+          <ul class="pkg-features fc-red">
+            <li>12 maanden / 1 scherm</li>
+            <li>Alle apparaten</li>
+            <li>HD kwaliteit</li>
+            <li>Eigen account</li>
+          </ul>
+          <button class="add-btn btn-nf add-to-cart" data-product="Netflix Basic HD" data-price="69" data-retail="95.88" data-dur="12 maanden">
+            <i class="fas fa-shopping-bag"></i> Toevoegen
+          </button>
+        </div>
+        <div class="pkg-card popular">
+          <div class="pop-tag">⭐ Populairste keuze</div>
+          <div class="card-ribbon ribbon-red">−43%</div>
+          <div class="pkg-name">Standard</div>
+          <div><span class="pkg-price-big">€89,00</span><span class="pkg-price-was">€155,88</span></div>
+          <div class="pkg-mo">€7,42/maand · 2 schermen</div>
+          <div class="savings-box">
+            <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€155,88</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€89,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€66,88</strong></div>
+          </div>
+          <ul class="pkg-features fc-red">
+            <li>12 maanden / 2 schermen</li>
+            <li>Tegelijk kijken op 2 schermen</li>
+            <li>Full HD kwaliteit</li>
+            <li>Downloaden op 2 toestellen</li>
+          </ul>
+          <button class="add-btn btn-nf add-to-cart" data-product="Netflix Standard" data-price="89" data-retail="155.88" data-dur="12 maanden">
+            <i class="fas fa-shopping-bag"></i> Toevoegen
+          </button>
+        </div>
+        <div class="pkg-card">
+          <div class="card-ribbon ribbon-red">VOORDELIGST</div>
+          <div class="pkg-name">Premium</div>
+          <div><span class="pkg-price-big">€119,00</span><span class="pkg-price-was">€215,88</span></div>
+          <div class="pkg-mo">€9,92/maand · 4 schermen</div>
+          <div class="savings-box">
+            <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€215,88</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€119,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€96,88</strong></div>
+          </div>
+          <ul class="pkg-features fc-red">
+            <li>12 maanden / 4 schermen</li>
+            <li>Tegelijk kijken op 4 schermen</li>
+            <li>4K + HDR kwaliteit</li>
+            <li>Downloaden op 6 toestellen</li>
+          </ul>
+          <button class="add-btn btn-nf add-to-cart" data-product="Netflix Premium" data-price="119" data-retail="215.88" data-dur="12 maanden">
+            <i class="fas fa-shopping-bag"></i> Toevoegen
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRUNCHYROLL -->
+    <div class="service-block fade-up" id="sec-crunchyroll">
+      <div class="service-hdr">
+        <div class="svc-ico ico-cr"><i class="fas fa-dragon"></i></div>
+        <div><div class="svc-title">Crunchyroll</div><div class="svc-sub">Alle anime, simulcasts & manga zonder reclame</div></div>
+      </div>
+      <div class="cards-grid grid-3">
+        <div class="pkg-card">
+          <div class="card-ribbon ribbon-orange">−49%</div>
+          <div class="pkg-name">Fan</div>
+          <div><span class="pkg-price-big">€49,00</span><span class="pkg-price-was">€95,88</span></div>
+          <div class="pkg-mo">€4,08/maand · 1 apparaat</div>
+          <div class="savings-box">
+            <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€95,88</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€49,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€46,88</strong></div>
+          </div>
+          <ul class="pkg-features fc-orange">
+            <li>12 maanden / 1 apparaat</li>
+            <li>Alle simulcasts & anime</li>
+            <li>Geen reclame</li>
+            <li>Eigen account</li>
+          </ul>
+          <button class="add-btn btn-cr add-to-cart" data-product="Crunchyroll Fan" data-price="49" data-retail="95.88" data-dur="12 maanden">
+            <i class="fas fa-shopping-bag"></i> Toevoegen
+          </button>
+        </div>
+        <div class="pkg-card popular">
+          <div class="pop-tag">⭐ Populairste keuze</div>
+          <div class="card-ribbon ribbon-orange">−42%</div>
+          <div class="pkg-name">Mega Fan</div>
+          <div><span class="pkg-price-big">€69,00</span><span class="pkg-price-was">€119,88</span></div>
+          <div class="pkg-mo">€5,75/maand · meerdere apparaten</div>
+          <div class="savings-box">
+            <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€119,88</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€69,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€50,88</strong></div>
+          </div>
+          <ul class="pkg-features fc-orange">
+            <li>12 maanden / meerdere apparaten</li>
+            <li>Offline downloaden</li>
+            <li>Alle simulcasts & anime</li>
+            <li>Geen reclame</li>
+          </ul>
+          <button class="add-btn btn-cr add-to-cart" data-product="Crunchyroll Mega Fan" data-price="69" data-retail="119.88" data-dur="12 maanden">
+            <i class="fas fa-shopping-bag"></i> Toevoegen
+          </button>
+        </div>
+        <div class="pkg-card">
+          <div class="card-ribbon ribbon-orange">VOORDELIGST</div>
+          <div class="pkg-name">Ultimate Fan</div>
+          <div><span class="pkg-price-big">€89,00</span><span class="pkg-price-was">€179,88</span></div>
+          <div class="pkg-mo">€7,42/maand · max. apparaten</div>
+          <div class="savings-box">
+            <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€179,88</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€89,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€90,88</strong></div>
+          </div>
+          <ul class="pkg-features fc-orange">
+            <li>12 maanden / max. apparaten</li>
+            <li>Offline downloaden</li>
+            <li>Exclusieve extra's</li>
+            <li>Geen reclame</li>
+          </ul>
+          <button class="add-btn btn-cr add-to-cart" data-product="Crunchyroll Ultimate Fan" data-price="89" data-retail="179.88" data-dur="12 maanden">
+            <i class="fas fa-shopping-bag"></i> Toevoegen
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRIME VIDEO -->
+    <div class="service-block fade-up" id="sec-prime">
+      <div class="service-hdr">
+        <div class="svc-ico ico-pv"><i class="fab fa-amazon"></i></div>
+        <div><div class="svc-title">Prime Video</div><div class="svc-sub">Amazon's films, series & exclusieve originals</div></div>
+      </div>
+      <div class="cards-grid grid-1">
+        <div class="pkg-card featured">
+          <div class="card-ribbon ribbon-blue">BESPAAR €22,88</div>
+          <div class="pkg-name">Prime Video</div>
+          <div><span class="pkg-price-big">€49,00</span><span class="pkg-price-was">€71,88</span></div>
+          <div class="pkg-mo">€4,08/maand · 1 account</div>
+          <div class="savings-box">
+            <div class="sv-row"><span>Normaal:</span><span class="sv-val-bad">€71,88</span></div>
+            <div class="sv-row good"><span>FlixTV:</span><span class="sv-val-good">€49,00</span></div>
+            <div class="sv-total"><i class="fas fa-piggy-bank"></i> Bespaar <strong>€22,88</strong></div>
+          </div>
+          <ul class="pkg-features fc-blue">
+            <li>12 maanden / 1 account</li>
+            <li>Films, series & Amazon Originals</li>
+            <li>HD / 4K kwaliteit</li>
+            <li>Eigen account</li>
+          </ul>
+          <button class="add-btn btn-pv add-to-cart" data-product="Prime Video" data-price="49" data-retail="71.88" data-dur="12 maanden">
+            <i class="fas fa-shopping-bag"></i> Toevoegen — €49,00
           </button>
         </div>
       </div>
@@ -894,14 +1109,14 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Beste deal ooit. Spotify + YouTube + IPTV voor bijna niks. Aanrader!"</p><div class="rev-name">— Nico, 23</div><div class="rev-age">📍 Antwerpen</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Super makkelijk en snel geregeld via WhatsApp. 10 minuten en alles werkte."</p><div class="rev-name">— Yasmine, 20</div><div class="rev-age">📍 Brussel</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"YouTube zonder reclame is echt een game changer. Nooit meer skippen 😭"</p><div class="rev-name">— Jonas, 22</div><div class="rev-age">📍 Leuven</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Spotify Duo met mijn lief voor €69/jaar. Wij betaalden dat vroeger per maand!"</p><div class="rev-name">— Bilal, 22</div><div class="rev-age">📍 Brugge</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Spotify Duo met mijn lief voor €79/jaar. Wij betaalden dat vroeger per maand!"</p><div class="rev-name">— Bilal, 22</div><div class="rev-age">📍 Brugge</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Champions League live zonder extra betalen. FlixTV is onmisbaar geworden."</p><div class="rev-name">— Ahmed, 25</div><div class="rev-age">📍 Mechelen</div></div>
       <!-- duplicate for loop -->
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Werkt perfect 🔥 Alles in 1 app, nooit meer losse abonnementen betalen."</p><div class="rev-name">— Lena, 21</div><div class="rev-age">📍 Gent</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Beste deal ooit. Spotify + YouTube + IPTV voor bijna niks. Aanrader!"</p><div class="rev-name">— Nico, 23</div><div class="rev-age">📍 Antwerpen</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Super makkelijk en snel geregeld via WhatsApp. 10 minuten en alles werkte."</p><div class="rev-name">— Yasmine, 20</div><div class="rev-age">📍 Brussel</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"YouTube zonder reclame is echt een game changer. Nooit meer skippen 😭"</p><div class="rev-name">— Jonas, 22</div><div class="rev-age">📍 Leuven</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Spotify Duo met mijn lief voor €69/jaar. Wij betaalden dat vroeger per maand!"</p><div class="rev-name">— Bilal, 22</div><div class="rev-age">📍 Brugge</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Spotify Duo met mijn lief voor €79/jaar. Wij betaalden dat vroeger per maand!"</p><div class="rev-name">— Bilal, 22</div><div class="rev-age">📍 Brugge</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Champions League live zonder extra betalen. FlixTV is onmisbaar geworden."</p><div class="rev-name">— Ahmed, 25</div><div class="rev-age">📍 Mechelen</div></div>
     </div>
   </div>
@@ -929,7 +1144,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opa
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="logo"><div class="logo-mark">F</div><div class="logo-name">Flix<em>TV</em></div></div>
+        <div class="logo"><div class="logo-mark"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="34,28 34,72 66,50" fill="#fff"/><path d="M70 38 A18 18 0 0 1 70 62" stroke="rgba(255,255,255,.85)" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M79 29 A31 31 0 0 1 79 71" stroke="rgba(255,255,255,.5)" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div><div class="logo-name">Flix<em>TV</em></div></div>
         <p>Premium streaming voor een eerlijke prijs. Direct actief via WhatsApp.</p>
       </div>
       <div class="footer-links">
@@ -1023,10 +1238,10 @@ const secObs=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:.3,rootMargin:'-100px 0px -50% 0px'});
-['sec-iptv','sec-youtube','sec-spotify'].forEach(id=>{const el=document.getElementById(id);if(el)secObs.observe(el);});
+['sec-iptv','sec-youtube','sec-spotify','sec-netflix','sec-crunchyroll','sec-prime'].forEach(id=>{const el=document.getElementById(id);if(el)secObs.observe(el);});
 
 /* ── SP TICKER ── */
-const spMsgs=['Lena uit Antwerpen bestelde 3 minuten geleden','Nico uit Gent test nu gratis','Yasmine uit Brussel bestelde zojuist','Jonas uit Leuven bestelde 8 minuten geleden','Bilal uit Brugge bestelde 5 minuten geleden','Sara uit Mechelen bestelde 2 minuten geleden','Ahmed uit Hasselt test nu gratis'];
+const spMsgs=['Lena uit Antwerpen bestelde 3 minuten geleden','Nico uit Gent test nu gratis','Yasmine uit Brussel bestelde zojuist','Jonas uit Leuven bestelde 8 minuten geleden','Bilal uit Brugge bestelde 5 minuten geleden','Sara uit Mechelen bestelde 2 minuten geleden','Ahmed uit Hasselt test nu gratis','Hicham uit Amsterdam bestelde 6 minuten geleden','Maroua uit Utrecht bestelde zojuist','Meryem uit Breda test nu gratis','Yassin uit Rotterdam bestelde 4 minuten geleden','Souad uit Den Haag bestelde 9 minuten geleden','Karim uit Eindhoven test nu gratis'];
 let spIdx=0;
 setInterval(()=>{
   const el=document.getElementById('sptext');if(!el)return;
@@ -1037,10 +1252,16 @@ setInterval(()=>{
 /* ── UPSELL DEFS ── */
 const upsellDefs={
   iptv:{ico:'🎧',title:'Voeg Spotify of YouTube toe',text:'Geen reclame meer — op je eigen account. Combineer en bespaar.',
-    opts:[{name:'Spotify Individueel',price:49,retail:155.88,sub:'1 account · 12 maanden'},{name:'Spotify Duo',price:69,retail:215.88,sub:'2 accounts · 12 maanden',def:true},{name:'YouTube Individueel',price:49,retail:167.88,sub:'Geen reclame · 12 maanden'}]},
+    opts:[{name:'Spotify Individueel',price:49,retail:155.88,sub:'1 account · 12 maanden'},{name:'Spotify Duo',price:79,retail:215.88,sub:'2 accounts · 12 maanden',def:true},{name:'YouTube Individueel',price:49,retail:167.88,sub:'Geen reclame · 12 maanden'}]},
   youtube:{ico:'📺',title:'Voeg FlixTV IPTV toe 📺',text:'25.000+ zenders, live sport, 69.000+ films & series — allemaal inbegrepen voor bijna niks extra.',
     opts:[{name:'FlixTV Premium',price:75,retail:1800,sub:'25.000+ zenders · live sport · 69.000+ films & series · 12 maanden',def:true}]},
   spotify:{ico:'📺',title:'Voeg FlixTV IPTV toe 📺',text:'25.000+ zenders, live sport, 69.000+ films & series — allemaal inbegrepen voor bijna niks extra.',
+    opts:[{name:'FlixTV Premium',price:75,retail:1800,sub:'25.000+ zenders · live sport · 69.000+ films & series · 12 maanden',def:true}]},
+  netflix:{ico:'📺',title:'Voeg FlixTV IPTV toe 📺',text:'25.000+ zenders, live sport, 69.000+ films & series — allemaal inbegrepen voor bijna niks extra.',
+    opts:[{name:'FlixTV Premium',price:75,retail:1800,sub:'25.000+ zenders · live sport · 69.000+ films & series · 12 maanden',def:true}]},
+  crunchyroll:{ico:'📺',title:'Voeg FlixTV IPTV toe 📺',text:'25.000+ zenders, live sport, 69.000+ films & series — allemaal inbegrepen voor bijna niks extra.',
+    opts:[{name:'FlixTV Premium',price:75,retail:1800,sub:'25.000+ zenders · live sport · 69.000+ films & series · 12 maanden',def:true}]},
+  prime:{ico:'📺',title:'Voeg FlixTV IPTV toe 📺',text:'25.000+ zenders, live sport, 69.000+ films & series — allemaal inbegrepen voor bijna niks extra.',
     opts:[{name:'FlixTV Premium',price:75,retail:1800,sub:'25.000+ zenders · live sport · 69.000+ films & series · 12 maanden',def:true}]},
 };
 
@@ -1048,6 +1269,9 @@ function getKey(name){
   if(name.includes('FlixTV'))return'iptv';
   if(name.includes('YouTube'))return'youtube';
   if(name.includes('Spotify'))return'spotify';
+  if(name.includes('Netflix'))return'netflix';
+  if(name.includes('Crunchyroll'))return'crunchyroll';
+  if(name.includes('Prime'))return'prime';
   return'iptv';
 }
 
