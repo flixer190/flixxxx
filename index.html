@@ -63,10 +63,10 @@ img{max-width:100%;display:block}
    HEADER
 ============================================================ */
 .hdr{position:sticky;top:0;z-index:999;padding:0 20px;transition:all var(--t)}
-.hdr-inner{display:flex;align-items:center;height:64px;gap:20px;max-width:1080px;margin:0 auto;border-bottom:1px solid var(--border)}
+.hdr-inner{display:flex;align-items:center;min-height:64px;padding:8px 0;gap:20px;max-width:1080px;margin:0 auto;border-bottom:1px solid var(--border)}
 .hdr.scrolled{background:rgba(247,249,252,.88);backdrop-filter:blur(20px)}
-.logo{display:flex;align-items:center;gap:10px;margin-right:auto;cursor:pointer}
-.logo-full{height:44px;width:auto;display:block}
+.logo{display:flex;align-items:center;gap:10px;margin:0 auto;transform:translateX(22px);cursor:pointer}
+.logo-full{height:88px;width:auto;max-width:100%;display:block}
 .topmenu{position:static;display:flex;gap:8px;justify-content:center;flex-wrap:nowrap;padding:10px 14px;background:var(--bg);border-bottom:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .topmenu::-webkit-scrollbar{display:none}
 .topmenu a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--text2);background:#fff;border:1px solid var(--border2);border-radius:var(--rf);padding:7px 16px;transition:all var(--t);flex-shrink:0}
@@ -900,7 +900,7 @@ document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 /* ── PKG NAV SCROLL ── */
 function scrollToSec(id,btn){
   const el=document.getElementById('sec-'+id);
-  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+  if(el)el.scrollIntoView({behavior:'smooth',block:'center'});
   document.querySelectorAll('.pnav-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
 }
@@ -948,7 +948,7 @@ const SERVICES={
   ]},
   crunchyroll:{label:'Crunchyroll',tiers:[
     {name:'Fan',price:49,sub:'1 apparaat · 12 maanden'},
-    {name:'Mega Fan',price:69,sub:'meerdere apparaten · 12 maanden',pop:true,best:true},
+    {name:'Mega Fan',price:69,sub:'meerdere apparaten · 12 maanden',best:true},
     {name:'Ultimate Fan',price:89,sub:'max. apparaten · 12 maanden'},
   ]},
   prime:{label:'Prime Video',tiers:[
