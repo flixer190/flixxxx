@@ -102,6 +102,9 @@ img{max-width:100%;display:block}
 .phone-fallback{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;color:#fff;background:linear-gradient(160deg,var(--accent),var(--accent3))}
 .phone-fallback i{font-size:34px;opacity:.9}
 .phone-fallback span{font-size:13px;font-weight:600;line-height:1.4;opacity:.95}
+.tap-sound{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:4;display:flex;align-items:center;gap:7px;background:var(--accent);color:#fff;font-size:12.5px;font-weight:700;padding:9px 15px;border-radius:999px;white-space:nowrap;cursor:pointer;box-shadow:0 6px 18px rgba(37,99,235,.5);animation:tapBounce 1.4s ease-in-out infinite}
+.tap-sound i{font-size:13px}
+@keyframes tapBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-6px)}}
 .hero-caption{font-size:15px;color:var(--text2);line-height:1.6;max-width:420px;font-weight:400;margin-top:4px}
 .hero-caption strong{color:var(--text);font-weight:600}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px}
@@ -569,15 +572,16 @@ img{max-width:100%;display:block}
     <div class="hero-inner">
       <div class="hero-eyebrow">België &amp; Nederland</div>
       <p class="hero-intro">Al je streaming op <strong>één plek</strong>, voor minder. Bekijk snel hoe het werkt 👇</p>
-      <div class="phone">
+      <div class="phone" onclick="var v=document.getElementById('hv');v.muted=!v.muted;v.play();var t=document.getElementById('tapSound');if(t)t.style.display=v.muted?'flex':'none';">
         <div class="notch"></div>
-        <video autoplay muted loop playsinline poster="">
+        <video id="hv" autoplay muted loop playsinline poster="">
           <source src="uitleg.mp4" type="video/mp4">
         </video>
         <div class="phone-fallback">
           <i class="fas fa-play-circle"></i>
           <span>Uitlegvideo komt hier<br>(voeg <b>uitleg.mp4</b> toe)</span>
         </div>
+        <div class="tap-sound" id="tapSound"><i class="fas fa-volume-high"></i> Tik voor geluid 👆</div>
       </div>
       <p class="hero-caption">Kies je dienst, kies je abonnement en <strong>bestel in 1 tik via WhatsApp</strong>. Wij regelen de rest.</p>
     </div>
