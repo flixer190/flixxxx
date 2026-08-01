@@ -89,7 +89,7 @@ img{max-width:100%;display:block}
 ============================================================ */
 .hero{display:flex;align-items:center;position:relative;overflow:hidden;padding:44px 0 56px}
 .hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.25);color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.3px;padding:7px 16px;border-radius:var(--rf)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--accent);border:none;color:#fff;font-size:12px;font-weight:700;letter-spacing:.3px;padding:7px 16px;border-radius:var(--rf)}
 .hero-eyebrow .flag{font-size:14px}
 .hero-logo{width:100%;max-width:380px;height:auto;margin:4px auto 0}
 .hero-intro{font-size:16px;color:var(--text2);line-height:1.6;max-width:440px;font-weight:400}
@@ -181,7 +181,6 @@ img{max-width:100%;display:block}
 .pnav-btn[data-sec="spotify"].active{border-color:rgba(29,185,84,.35);background:rgba(29,185,84,.08);color:#16a34a}
 .pnav-btn[data-sec="netflix"].active{border-color:rgba(229,9,20,.35);background:rgba(229,9,20,.08);color:#dc2626}
 .pnav-btn[data-sec="crunchyroll"].active{border-color:rgba(244,117,33,.4);background:rgba(244,117,33,.1);color:#c2410c}
-.pnav-btn[data-sec="prime"].active{border-color:rgba(0,168,225,.4);background:rgba(0,168,225,.1);color:#0369a1}
 
 .service-block{margin-bottom:80px}
 .service-hdr{display:flex;align-items:center;gap:16px;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
@@ -603,7 +602,6 @@ img{max-width:100%;display:block}
       <button class="pnav-btn" data-sec="netflix" onclick="scrollToSec('netflix',this)"><i class="fas fa-film"></i> Netflix</button>
       <button class="pnav-btn" data-sec="iptv" onclick="scrollToSec('iptv',this)"><i class="fas fa-tv"></i> IPTV</button>
       <button class="pnav-btn" data-sec="crunchyroll" onclick="scrollToSec('crunchyroll',this)"><i class="fas fa-dragon"></i> Crunchyroll</button>
-      <button class="pnav-btn" data-sec="prime" onclick="scrollToSec('prime',this)"><i class="fab fa-amazon"></i> Prime Video</button>
     </div>
 
     <!-- SPOTIFY -->
@@ -702,9 +700,8 @@ img{max-width:100%;display:block}
           </div>
         </div>
         <div class="svc-plans">
-          <span class="svc-plan">Fan <b>€49</b></span>
-          <span class="svc-plan">Mega Fan <b>€69</b></span>
-          <span class="svc-plan">Ultimate Fan <b>€89</b></span>
+          <span class="svc-plan">Fan <b>€30</b></span>
+          <span class="svc-plan">Mega Fan <b>€35</b></span>
         </div>
         <button class="add-btn btn-cr add-to-cart" data-svc="crunchyroll" data-tier="Mega Fan">
           <i class="fas fa-shopping-bag"></i> Neem Crunchyroll
@@ -712,26 +709,6 @@ img{max-width:100%;display:block}
       </div>
     </div>
 
-    <!-- PRIME VIDEO -->
-    <div class="service-block fade-up" id="sec-prime">
-      <div class="svc-card">
-        <div class="svc-card-top">
-          <div class="svc-ico ico-pv"><i class="fab fa-amazon"></i></div>
-          <div class="svc-card-info">
-            <div class="svc-title">Prime Video</div>
-            <div class="svc-sub">Amazon's films, series & exclusieve originals</div>
-          </div>
-        </div>
-        <div class="svc-plans">
-          <span class="svc-plan">Prime Video <b>€49</b></span>
-          <span class="svc-plan">12 maanden</span>
-          <span class="svc-plan">HD / 4K</span>
-        </div>
-        <button class="add-btn btn-pv add-to-cart" data-svc="prime" data-tier="Prime Video">
-          <i class="fas fa-shopping-bag"></i> Neem Prime Video
-        </button>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -782,7 +759,6 @@ img{max-width:100%;display:block}
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"YouTube Premium is echt een gamechanger. Nooit meer skippen 😭"</p><div class="rev-name">— Nisrine, 19</div><div class="rev-age">📍 Brussel</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"IPTV met alle live sport. Champions League zonder extra betalen 🙌"</p><div class="rev-name">— Jouad, 25</div><div class="rev-age">📍 Eindhoven</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Snel, goedkoop en betrouwbaar. Betaald via PayPal, direct actief."</p><div class="rev-name">— Lukas, 26</div><div class="rev-age">📍 Gent</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Prime Video toegevoegd voor een prikje. Werkt perfect op mijn tv."</p><div class="rev-name">— Kato, 20</div><div class="rev-age">📍 Leuven</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Alles via WhatsApp geregeld, heel persoonlijk. Echt een aanrader!"</p><div class="rev-name">— Irma, 27</div><div class="rev-age">📍 Groningen</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Werkt perfect 🔥 Alles op 1 plek, nooit meer losse abonnementen."</p><div class="rev-name">— Lena, 21</div><div class="rev-age">📍 Brugge</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Beste deal ooit. Spotify + YouTube + IPTV voor bijna niks!"</p><div class="rev-name">— Nico, 23</div><div class="rev-age">📍 Tilburg</div></div>
@@ -797,7 +773,6 @@ img{max-width:100%;display:block}
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"YouTube Premium is echt een gamechanger. Nooit meer skippen 😭"</p><div class="rev-name">— Nisrine, 19</div><div class="rev-age">📍 Brussel</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"IPTV met alle live sport. Champions League zonder extra betalen 🙌"</p><div class="rev-name">— Jouad, 25</div><div class="rev-age">📍 Eindhoven</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Snel, goedkoop en betrouwbaar. Betaald via PayPal, direct actief."</p><div class="rev-name">— Lukas, 26</div><div class="rev-age">📍 Gent</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Prime Video toegevoegd voor een prikje. Werkt perfect op mijn tv."</p><div class="rev-name">— Kato, 20</div><div class="rev-age">📍 Leuven</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Alles via WhatsApp geregeld, heel persoonlijk. Echt een aanrader!"</p><div class="rev-name">— Irma, 27</div><div class="rev-age">📍 Groningen</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Werkt perfect 🔥 Alles op 1 plek, nooit meer losse abonnementen."</p><div class="rev-name">— Lena, 21</div><div class="rev-age">📍 Brugge</div></div>
       <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Beste deal ooit. Spotify + YouTube + IPTV voor bijna niks!"</p><div class="rev-name">— Nico, 23</div><div class="rev-age">📍 Tilburg</div></div>
@@ -815,7 +790,7 @@ img{max-width:100%;display:block}
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Hoe werkt IPTV?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>IPTV is televisie via het internet. Je kijkt via een gratis app op je smart tv, telefoon of tablet. Geen schotel, geen decoder, geen gedoe. Wij installeren alles gratis voor je.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Is het direct actief na betaling?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Ja! Na betaling activeren wij alles zo snel mogelijk — in de meeste gevallen binnen enkele minuten. Wij sturen je daarna alle instructies via WhatsApp.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Hoe bestel ik?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Klik op "Toevoegen" bij je gewenste pakket. Er opent een bestelmodal waar je je betaalmethode kiest. Dan stuur je de bestelling via WhatsApp naar ons. Wij begeleiden je verder.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Behoud ik mijn account?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Ja. Voor al onze diensten — Spotify, YouTube, Netflix, Crunchyroll, Prime Video én IPTV — activeren wij alles op jouw eigen account. Jij behoudt volledige controle en niemand anders heeft toegang.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Behoud ik mijn account?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Ja. Voor al onze diensten — Spotify, YouTube, Netflix, Crunchyroll én IPTV — activeren wij alles op jouw eigen account. Jij behoudt volledige controle en niemand anders heeft toegang.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Op welke apparaten werkt het?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>FlixTV werkt op telefoon, tablet, laptop, smart tv en Fire Stick. Wij helpen je gratis met de installatie via WhatsApp — op elk apparaat.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Hoe betaal ik?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Betaling gaat via WhatsApp — PayPal, bankoverschrijving of Paysafecard. Geen automatische domiciliëring, geen verrassingen. Eenmalige betaling voor 12 maanden.</p></div></div>
     </div>
@@ -918,7 +893,7 @@ const secObs=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:.3,rootMargin:'-100px 0px -50% 0px'});
-['sec-spotify','sec-youtube','sec-netflix','sec-iptv','sec-crunchyroll','sec-prime'].forEach(id=>{const el=document.getElementById(id);if(el)secObs.observe(el);});
+['sec-spotify','sec-youtube','sec-netflix','sec-iptv','sec-crunchyroll'].forEach(id=>{const el=document.getElementById(id);if(el)secObs.observe(el);});
 
 /* ── SOCIAL PROOF TICKER (optioneel element) ── */
 const spMsgs=['Lena uit Antwerpen bestelde 3 minuten geleden','Nico uit Gent test nu gratis','Yasmine uit Brussel bestelde zojuist','Jonas uit Leuven bestelde 8 minuten geleden','Bilal uit Brugge bestelde 5 minuten geleden','Sara uit Mechelen bestelde 2 minuten geleden','Ahmed uit Hasselt test nu gratis','Hicham uit Amsterdam bestelde 6 minuten geleden','Maroua uit Utrecht bestelde zojuist','Meryem uit Breda test nu gratis','Yassin uit Rotterdam bestelde 4 minuten geleden','Souad uit Den Haag bestelde 9 minuten geleden','Karim uit Eindhoven test nu gratis'];
@@ -951,12 +926,8 @@ const SERVICES={
     {name:'Premium',price:75,sub:'25.000+ zenders · live sport · 12 maanden',pop:true},
   ]},
   crunchyroll:{label:'Crunchyroll',tiers:[
-    {name:'Fan',price:49,sub:'1 apparaat · 12 maanden'},
-    {name:'Mega Fan',price:69,sub:'meerdere apparaten · 12 maanden',best:true},
-    {name:'Ultimate Fan',price:89,sub:'max. apparaten · 12 maanden'},
-  ]},
-  prime:{label:'Prime Video',tiers:[
-    {name:'Prime Video',price:49,sub:'1 account · 12 maanden',pop:true},
+    {name:'Fan',price:30,sub:'1 apparaat · 12 maanden'},
+    {name:'Mega Fan',price:35,sub:'meerdere apparaten · 12 maanden',best:true},
   ]},
 };
 
