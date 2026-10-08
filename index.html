@@ -95,18 +95,34 @@ img{max-width:100%;display:block}
 .hero-intro{font-size:16px;color:var(--text2);line-height:1.6;max-width:440px;font-weight:400}
 .hero-intro strong{color:var(--text);font-weight:600}
 
-/* PHONE VIDEO */
-.phone{position:relative;width:250px;max-width:74vw;aspect-ratio:9/19;border:9px solid #0f172a;border-radius:38px;overflow:hidden;background:#0f172a;box-shadow:0 24px 60px rgba(15,23,42,.28);margin:6px auto 0}
-.phone .notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:20px;background:#0f172a;border-radius:0 0 14px 14px;z-index:3}
-.phone video{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:2}
-.phone-fallback{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;color:#fff;background:linear-gradient(160deg,var(--accent),var(--accent3))}
-.phone-fallback i{font-size:34px;opacity:.9}
-.phone-fallback span{font-size:13px;font-weight:600;line-height:1.4;opacity:.95}
-.tap-sound{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:4;display:flex;align-items:center;gap:7px;background:var(--accent);color:#fff;font-size:12.5px;font-weight:700;padding:9px 15px;border-radius:999px;white-space:nowrap;cursor:pointer;box-shadow:0 6px 18px rgba(37,99,235,.5);animation:tapBounce 1.4s ease-in-out infinite}
-.tap-sound i{font-size:13px}
-@keyframes tapBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-6px)}}
-.hero-caption{font-size:15px;color:var(--text2);line-height:1.6;max-width:420px;font-weight:400;margin-top:4px}
-.hero-caption strong{color:var(--text);font-weight:600}
+/* ZO WERKT HET (poster in hero) */
+.howto{width:100%;max-width:420px;margin-top:4px;text-align:left;background:var(--card);border:1px solid var(--border);border-radius:var(--r3);box-shadow:0 18px 50px rgba(37,99,235,.14);overflow:hidden}
+.howto-head{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:18px 20px}
+.howto-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:rgba(255,255,255,.2);padding:4px 10px;border-radius:var(--rf)}
+.howto-head h3{font-family:var(--display);font-size:22px;font-weight:800;line-height:1.15;margin-top:8px}
+.howto-steps{list-style:none;margin:0;padding:18px 18px 4px}
+.howto-step{position:relative;display:flex;gap:12px;padding-bottom:18px}
+.howto-step:not(:last-child)::before{content:'';position:absolute;left:13px;top:30px;bottom:2px;width:2px;background:var(--border2)}
+.hs-num{position:relative;z-index:1;width:28px;height:28px;flex-shrink:0;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.hs-body{flex:1;min-width:0}
+.hs-title{font-size:14px;font-weight:600;color:var(--text);margin:4px 0 8px}
+.hs-mock{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:10px}
+.mk-svc{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px}
+.mk-ico{width:24px;height:24px;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:12px}
+.mk-btn{position:relative;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px;border-radius:8px;color:#fff;font-size:12px;font-weight:700}
+.mk-tap{position:absolute;right:14px;bottom:-14px;font-size:20px;animation:tapBounce 1.4s ease-in-out infinite}
+@keyframes tapBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.mk-row{display:flex;align-items:center;gap:8px;padding:7px 10px;background:#fff;border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:600;color:var(--text)}
+.mk-row+.mk-row{margin-top:6px}
+.mk-row b{margin-left:auto}
+.mk-row.sel{border-color:var(--accent);background:rgba(37,99,235,.06)}
+.mk-radio{width:13px;height:13px;flex-shrink:0;border-radius:50%;border:2px solid var(--border3)}
+.mk-row.sel .mk-radio{border-color:var(--accent);background:radial-gradient(var(--accent) 40%,transparent 46%)}
+.mk-pays{display:flex;flex-wrap:wrap;gap:6px}
+.mk-pays .mk-row{margin-top:0}
+.mk-wa{display:flex;align-items:center;justify-content:center;gap:7px;padding:11px;border-radius:8px;background:var(--wa);color:#fff;font-size:13px;font-weight:700}
+.howto-foot{display:flex;align-items:flex-start;gap:10px;margin:0 18px 18px;padding:12px 14px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.3);border-radius:var(--r);font-size:13px;line-height:1.5;color:var(--text)}
+.howto-foot i{color:#16a34a;font-size:18px;margin-top:1px}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px}
 
 /* BUTTONS */
@@ -299,6 +315,16 @@ img{max-width:100%;display:block}
 .rev-text{font-size:14px;color:var(--text2);line-height:1.65;margin-bottom:14px;font-weight:300}
 .rev-name{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.5px}
 .rev-age{font-size:11px;color:var(--text3);margin-top:2px}
+/* Echte WhatsApp-screenshots (alleen NL) */
+html[lang="en"] .only-nl{display:none!important}
+html[lang="nl"] .only-en{display:none!important}
+.shots-track{display:flex;align-items:center;gap:16px;width:max-content;padding:8px 20px;animation:revs 70s linear infinite}
+.rev-track-wrap:hover .shots-track{animation-play-state:paused}
+.shot{width:270px;flex-shrink:0;padding:0;border:none;border-radius:var(--r2);overflow:hidden;background:#0b141a;box-shadow:0 8px 24px rgba(15,23,42,.18);cursor:zoom-in}
+.shot img{width:100%;height:auto;display:block}
+.shot-box{position:fixed;inset:0;z-index:2100;background:rgba(15,23,42,.85);display:flex;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
+.shot-box img{max-width:min(520px,100%);max-height:90vh;border-radius:var(--r2);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+@media(prefers-reduced-motion:reduce){.shots-track{animation:none}.rev-track-wrap{overflow-x:auto}}
 
 /* ============================================================
    FAQ
@@ -495,6 +521,37 @@ img{max-width:100%;display:block}
 .svc-plan b{color:var(--text);font-weight:700}
 .svc-card .add-btn{width:100%;padding:13px}
 
+/* Special offer */
+.svc-card.deal{position:relative;border:2px solid var(--accent);background:linear-gradient(135deg,#fff,rgba(37,99,235,.07));box-shadow:0 12px 32px rgba(37,99,235,.18)}
+.svc-card.deal:hover{border-color:var(--accent)}
+.ico-deal{background:linear-gradient(135deg,#f59e0b,#ef4444)}
+.svc-plan .fab,.svc-plan .fas{margin-right:4px}
+.deal-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.deal-old{font-size:16px;font-weight:600;color:var(--text3);text-decoration:line-through}
+.deal-new{font-family:var(--display);font-size:34px;font-weight:800;color:var(--text);line-height:1}
+.deal-per{font-size:13px;font-weight:600;color:var(--text2)}
+.deal-save{display:inline-flex;align-items:center;background:rgba(34,197,94,.12);color:#16a34a;font-size:12px;font-weight:700;padding:5px 11px;border-radius:var(--rf)}
+.btn-deal{background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.pnav-btn[data-sec="deal"]{border-color:rgba(245,158,11,.5);color:#b45309}
+.pnav-btn[data-sec="deal"].active{border-color:rgba(245,158,11,.6);background:rgba(245,158,11,.12);color:#b45309}
+
+/* ============================================================
+   TAAL / LANGUAGE
+============================================================ */
+.hdr-inner{position:relative}
+.lang-switch{position:absolute;right:0;top:50%;transform:translateY(-50%);display:flex;gap:2px;padding:3px;background:#fff;border:1px solid var(--border2);border-radius:var(--rf)}
+.lang-switch button{border:none;background:none;font-family:var(--font);font-size:11px;font-weight:700;color:var(--text2);padding:5px 9px;border-radius:var(--rf);cursor:pointer;transition:all var(--t)}
+.lang-switch button.active{background:var(--accent);color:#fff}
+@media(min-width:769px){.lang-switch{position:static;transform:none;margin-left:8px}}
+.lang-ov{position:fixed;inset:0;z-index:2000;background:rgba(15,23,42,.55);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:16px}
+.lang-box{background:var(--card);border-radius:var(--r3);padding:28px 22px 22px;width:100%;max-width:340px;text-align:center;box-shadow:0 24px 60px rgba(15,23,42,.3);animation:slideUp .3s cubic-bezier(.4,0,.2,1)}
+.lang-logo{width:56px;height:56px;margin:0 auto 14px}
+.lang-box h2{font-family:var(--display);font-size:22px;font-weight:800;color:var(--text)}
+.lang-box p{font-size:14px;color:var(--text2);margin:4px 0 10px}
+.lang-opt{display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px;margin-top:10px;border:1.5px solid var(--border2);border-radius:var(--r2);background:#fff;font-family:var(--font);font-size:16px;font-weight:700;color:var(--text);cursor:pointer;transition:all var(--t)}
+.lang-opt:hover{border-color:var(--accent);background:rgba(37,99,235,.06)}
+.lang-code{display:inline-flex;align-items:center;justify-content:center;width:34px;height:26px;border-radius:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:800}
+
 /* ============================================================
    CHECKOUT MODAL
 ============================================================ */
@@ -547,18 +604,22 @@ img{max-width:100%;display:block}
       <img src="logo-full.svg" alt="FlixTV — Listen and watch for less" class="logo-full">
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#pakketten">Aanbod</a></li>
-      <li><a href="#werkwijze">Werkwijze</a></li>
+      <li><a href="#pakketten" data-i18n="nav_offer">Aanbod</a></li>
+      <li><a href="#werkwijze" data-i18n="nav_how">Werkwijze</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
+    <div class="lang-switch" role="group" aria-label="Taal / Language">
+      <button type="button" data-lang="nl">NL</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
   </div>
 </header>
 
 <!-- QUICK MENU -->
 <nav class="topmenu">
-  <a href="#pakketten">Aanbod</a>
-  <a href="#werkwijze">Werkwijze</a>
+  <a href="#pakketten" data-i18n="nav_offer">Aanbod</a>
+  <a href="#werkwijze" data-i18n="nav_how">Werkwijze</a>
   <a href="#reviews">Reviews</a>
   <a href="#faq">FAQ</a>
 </nav>
@@ -569,20 +630,59 @@ img{max-width:100%;display:block}
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
-      <div class="hero-eyebrow">België &amp; Nederland</div>
-      <p class="hero-intro">Al je streaming op <strong>één plek</strong>, voor minder. Bekijk snel hoe het werkt 👇</p>
-      <div class="phone" onclick="var v=document.getElementById('hv');v.muted=!v.muted;v.play();var t=document.getElementById('tapSound');if(t)t.style.display=v.muted?'flex':'none';">
-        <div class="notch"></div>
-        <video id="hv" autoplay muted loop playsinline poster="">
-          <source src="uitleg.mp4" type="video/mp4">
-        </video>
-        <div class="phone-fallback">
-          <i class="fas fa-play-circle"></i>
-          <span>Uitlegvideo komt hier<br>(voeg <b>uitleg.mp4</b> toe)</span>
+      <div class="hero-eyebrow" data-i18n="hero_eyebrow">Europa &amp; UK</div>
+      <p class="hero-intro" data-i18n="hero_intro">Al je streaming op <strong>één plek</strong>, voor minder. Bekijk snel hoe het werkt 👇</p>
+      <!-- ZO WERKT HET: prijzen in de voorbeelden gelijk houden met Spotify hieronder -->
+      <div class="howto">
+        <div class="howto-head">
+          <span class="howto-tag" data-i18n="ht_tag">Zo werkt het</span>
+          <h3 data-i18n="ht_title">Bestellen in 4 stappen</h3>
         </div>
-        <div class="tap-sound" id="tapSound"><i class="fas fa-volume-high"></i> Tik voor geluid 👆</div>
+        <ol class="howto-steps">
+          <li class="howto-step">
+            <div class="hs-num">1</div>
+            <div class="hs-body">
+              <div class="hs-title" data-i18n="ht1">Kies je dienst en tik op <b>Neem</b></div>
+              <div class="hs-mock" aria-hidden="true">
+                <div class="mk-svc"><span class="mk-ico ico-sp"><i class="fab fa-spotify"></i></span>Spotify Premium</div>
+                <div class="mk-btn btn-sp"><i class="fas fa-shopping-bag"></i> <span data-i18n="ht1_btn">Neem Spotify Premium</span><span class="mk-tap">👆</span></div>
+              </div>
+            </div>
+          </li>
+          <li class="howto-step">
+            <div class="hs-num">2</div>
+            <div class="hs-body">
+              <div class="hs-title" data-i18n="ht2">Kies je abonnement</div>
+              <div class="hs-mock" aria-hidden="true">
+                <div class="mk-row"><span class="mk-radio"></span><span data-i18n="ht_ind">Individueel</span><b>€55</b></div>
+                <div class="mk-row sel"><span class="mk-radio"></span>Duo ⭐<b>€85</b></div>
+                <div class="mk-row"><span class="mk-radio"></span>Trio<b>€99</b></div>
+              </div>
+            </div>
+          </li>
+          <li class="howto-step">
+            <div class="hs-num">3</div>
+            <div class="hs-body">
+              <div class="hs-title" data-i18n="ht3">Kies je betaalmethode</div>
+              <div class="hs-mock mk-pays" aria-hidden="true">
+                <div class="mk-row sel"><span class="mk-radio"></span><i class="fab fa-paypal"></i> PayPal</div>
+                <div class="mk-row"><span class="mk-radio"></span><i class="fas fa-university"></i> <span data-i18n="pay_bank">Bankoverschrijving</span></div>
+                <div class="mk-row"><span class="mk-radio"></span><i class="fas fa-ticket-alt"></i> Paysafecard</div>
+              </div>
+            </div>
+          </li>
+          <li class="howto-step">
+            <div class="hs-num">4</div>
+            <div class="hs-body">
+              <div class="hs-title" data-i18n="ht4">Stuur je bestelling door naar WhatsApp</div>
+              <div class="hs-mock" aria-hidden="true">
+                <div class="mk-wa"><i class="fab fa-whatsapp"></i> <span data-i18n="ht4_btn">Stuur bestelling via WhatsApp</span></div>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <div class="howto-foot" data-i18n="ht_foot"><i class="fab fa-whatsapp"></i><span>Vanaf daar neemt onze collega het over en helpt je met de <b>betaling</b> en <b>activatie</b>. Alles gebeurt gewoon via WhatsApp.</span></div>
       </div>
-      <p class="hero-caption">Kies je dienst, kies je abonnement en <strong>bestel in 1 tik via WhatsApp</strong>. Wij regelen de rest.</p>
     </div>
   </div>
 </section>
@@ -591,17 +691,44 @@ img{max-width:100%;display:block}
 <section id="pakketten" class="pkgsec">
   <div class="container">
     <div class="sh fade-up">
-      <span class="sh-label">Ons aanbod</span>
-      <h2>Kies je dienst.<br>Kies je abonnement.</h2>
-      <p>Klik op een dienst, kies je abonnement en betaalmethode — en bestel in 1 tik via WhatsApp.</p>
+      <span class="sh-label" data-i18n="pkg_label">Ons aanbod</span>
+      <h2 data-i18n="pkg_h2">Kies je dienst.<br>Kies je abonnement.</h2>
+      <p data-i18n="pkg_p">Klik op een dienst, kies je abonnement en betaalmethode — en bestel in 1 tik via WhatsApp.</p>
     </div>
 
     <div class="pkg-nav fade-up">
-      <button class="pnav-btn active" data-sec="spotify" onclick="scrollToSec('spotify',this)"><i class="fab fa-spotify"></i> Spotify</button>
+      <button class="pnav-btn active" data-sec="deal" onclick="scrollToSec('deal',this)"><i class="fas fa-fire"></i> Special Offer</button>
+      <button class="pnav-btn" data-sec="spotify" onclick="scrollToSec('spotify',this)"><i class="fab fa-spotify"></i> Spotify</button>
       <button class="pnav-btn" data-sec="youtube" onclick="scrollToSec('youtube',this)"><i class="fab fa-youtube"></i> YouTube</button>
       <button class="pnav-btn" data-sec="netflix" onclick="scrollToSec('netflix',this)"><i class="fas fa-film"></i> Netflix</button>
       <button class="pnav-btn" data-sec="iptv" onclick="scrollToSec('iptv',this)"><i class="fas fa-tv"></i> IPTV</button>
       <button class="pnav-btn" data-sec="crunchyroll" onclick="scrollToSec('crunchyroll',this)"><i class="fas fa-dragon"></i> Crunchyroll</button>
+    </div>
+
+    <!-- SPECIAL OFFER -->
+    <div class="service-block fade-up" id="sec-deal">
+      <div class="svc-card deal">
+        <div class="svc-card-top">
+          <div class="svc-ico ico-deal"><i class="fas fa-gift"></i></div>
+          <div class="svc-card-info">
+            <div class="svc-title">Special Offer <span class="svc-tag">🔥 3 in 1</span></div>
+            <div class="svc-sub" data-i18n="deal_sub">Spotify, YouTube Premium en Netflix samen, 12 maanden op je eigen account</div>
+          </div>
+        </div>
+        <div class="svc-plans">
+          <span class="svc-plan" data-i18n="deal_sp"><i class="fab fa-spotify" style="color:#1DB954"></i>Spotify <b>Individueel</b></span>
+          <span class="svc-plan" data-i18n="deal_yt"><i class="fab fa-youtube" style="color:#FF0000"></i>YouTube <b>Individueel</b></span>
+          <span class="svc-plan"><i class="fas fa-film" style="color:#E50914"></i>Netflix <b>Basic HD</b></span>
+        </div>
+        <div class="deal-price">
+          <span class="deal-new">€150</span>
+          <span class="deal-per" data-i18n="deal_per">/ 12 maanden</span>
+          <span class="deal-save" data-i18n="deal_save">Bespaar €300+</span>
+        </div>
+        <button class="add-btn btn-deal add-to-cart" data-svc="deal" data-tier="Spotify Individueel + YouTube Individueel + Netflix Basic HD" data-i18n="deal_btn">
+          <i class="fas fa-shopping-bag"></i> Neem de Special Offer
+        </button>
+      </div>
     </div>
 
     <!-- SPOTIFY -->
@@ -611,15 +738,16 @@ img{max-width:100%;display:block}
           <div class="svc-ico ico-sp"><i class="fab fa-spotify"></i></div>
           <div class="svc-card-info">
             <div class="svc-title">Spotify Premium <span class="svc-tag">🏆 Bestseller</span></div>
-            <div class="svc-sub">Luister onbeperkt zonder reclame op je eigen account</div>
+            <div class="svc-sub" data-i18n="sp_sub">Luister onbeperkt zonder reclame op je eigen account</div>
           </div>
         </div>
         <div class="svc-plans">
-          <span class="svc-plan">Solo <b>€49</b></span>
-          <span class="svc-plan">Duo <b>€79</b></span>
-          <span class="svc-plan">Trio <b>€89</b></span>
+          <span class="svc-plan" data-i18n="sp_ind">Individueel <b>€55</b></span>
+          <span class="svc-plan">Duo <b>€85</b></span>
+          <span class="svc-plan">Trio <b>€99</b></span>
+          <span class="svc-plan" data-i18n="months12">12 maanden</span>
         </div>
-        <button class="add-btn btn-sp add-to-cart" data-svc="spotify" data-tier="Duo">
+        <button class="add-btn btn-sp add-to-cart" data-svc="spotify" data-tier="Duo" data-i18n="sp_btn">
           <i class="fas fa-shopping-bag"></i> Neem Spotify Premium
         </button>
       </div>
@@ -632,15 +760,16 @@ img{max-width:100%;display:block}
           <div class="svc-ico ico-yt"><i class="fab fa-youtube"></i></div>
           <div class="svc-card-info">
             <div class="svc-title">YouTube Premium <span class="svc-tag">🏆 Bestseller</span></div>
-            <div class="svc-sub">Nooit meer reclame — achtergrond afspelen & downloaden</div>
+            <div class="svc-sub" data-i18n="yt_sub">Nooit meer reclame — achtergrond afspelen & downloaden</div>
           </div>
         </div>
         <div class="svc-plans">
-          <span class="svc-plan">Individueel <b>€49</b></span>
-          <span class="svc-plan">Duo <b>€79</b></span>
-          <span class="svc-plan">Familie <b>€119</b></span>
+          <span class="svc-plan" data-i18n="yt_ind">Individueel <b>€59</b></span>
+          <span class="svc-plan">Duo <b>€89</b></span>
+          <span class="svc-plan" data-i18n="yt_fam">Familie <b>€119</b></span>
+          <span class="svc-plan" data-i18n="months12">12 maanden</span>
         </div>
-        <button class="add-btn btn-yt add-to-cart" data-svc="youtube" data-tier="Duo">
+        <button class="add-btn btn-yt add-to-cart" data-svc="youtube" data-tier="Duo" data-i18n="yt_btn">
           <i class="fas fa-shopping-bag"></i> Neem YouTube Premium
         </button>
       </div>
@@ -653,16 +782,16 @@ img{max-width:100%;display:block}
           <div class="svc-ico ico-nf"><i class="fas fa-film"></i></div>
           <div class="svc-card-info">
             <div class="svc-title">Netflix</div>
-            <div class="svc-sub">Films, series & originals — in HD/4K op je eigen account</div>
+            <div class="svc-sub" data-i18n="nf_sub">Films, series & originals — in HD/4K op je eigen account</div>
           </div>
         </div>
         <div class="svc-plans">
-          <span class="svc-plan">Mobile <b>€55</b></span>
           <span class="svc-plan">Basic HD <b>€69</b></span>
           <span class="svc-plan">Standard <b>€89</b></span>
           <span class="svc-plan">Premium <b>€119</b></span>
+          <span class="svc-plan" data-i18n="months12">12 maanden</span>
         </div>
-        <button class="add-btn btn-nf add-to-cart" data-svc="netflix" data-tier="Standard">
+        <button class="add-btn btn-nf add-to-cart" data-svc="netflix" data-tier="Standard" data-i18n="nf_btn">
           <i class="fas fa-shopping-bag"></i> Neem Netflix
         </button>
       </div>
@@ -675,15 +804,15 @@ img{max-width:100%;display:block}
           <div class="svc-ico ico-iptv"><i class="fas fa-tv"></i></div>
           <div class="svc-card-info">
             <div class="svc-title">IPTV <span class="svc-tag">🏆 Bestseller</span></div>
-            <div class="svc-sub">25.000+ zenders, alle live sport & 69.000+ films/series</div>
+            <div class="svc-sub" data-i18n="iptv_sub">25.000+ zenders, alle live sport & 69.000+ films/series</div>
           </div>
         </div>
         <div class="svc-plans">
           <span class="svc-plan">Premium <b>€75</b></span>
-          <span class="svc-plan">12 maanden</span>
+          <span class="svc-plan" data-i18n="months12">12 maanden</span>
           <span class="svc-plan">HD / 4K / 8K</span>
         </div>
-        <button class="add-btn btn-iptv add-to-cart" data-svc="iptv" data-tier="Premium">
+        <button class="add-btn btn-iptv add-to-cart" data-svc="iptv" data-tier="Premium" data-i18n="iptv_btn">
           <i class="fas fa-shopping-bag"></i> Neem IPTV
         </button>
       </div>
@@ -696,14 +825,14 @@ img{max-width:100%;display:block}
           <div class="svc-ico ico-cr"><i class="fas fa-dragon"></i></div>
           <div class="svc-card-info">
             <div class="svc-title">Crunchyroll</div>
-            <div class="svc-sub">Alle anime, simulcasts & manga zonder reclame</div>
+            <div class="svc-sub" data-i18n="cr_sub">Alle anime, simulcasts & manga zonder reclame</div>
           </div>
         </div>
         <div class="svc-plans">
-          <span class="svc-plan">Fan <b>€30</b></span>
           <span class="svc-plan">Mega Fan <b>€35</b></span>
+          <span class="svc-plan" data-i18n="months12">12 maanden</span>
         </div>
-        <button class="add-btn btn-cr add-to-cart" data-svc="crunchyroll" data-tier="Mega Fan">
+        <button class="add-btn btn-cr add-to-cart" data-svc="crunchyroll" data-tier="Mega Fan" data-i18n="cr_btn">
           <i class="fas fa-shopping-bag"></i> Neem Crunchyroll
         </button>
       </div>
@@ -717,25 +846,25 @@ img{max-width:100%;display:block}
 <section id="werkwijze" class="how-sec">
   <div class="container">
     <div class="sh fade-up">
-      <span class="sh-label">Werkwijze</span>
-      <h2>In 3 stappen actief.</h2>
-      <p>Van bestelling tot actief — wij begeleiden je persoonlijk via WhatsApp.</p>
+      <span class="sh-label" data-i18n="how_label">Werkwijze</span>
+      <h2 data-i18n="how_h2">In 3 stappen actief.</h2>
+      <p data-i18n="how_p">Van bestelling tot actief — wij begeleiden je persoonlijk via WhatsApp.</p>
     </div>
     <div class="how-grid fade-up">
       <div class="how-card">
         <div class="how-num">1</div>
-        <h4>Kies je pakket</h4>
-        <p>Klik op "Toevoegen", kies je abonnement en stuur je bestelling in 1 tik via WhatsApp.</p>
+        <h4 data-i18n="how1_h">Kies je pakket</h4>
+        <p data-i18n="how1_p">Klik op "Toevoegen", kies je abonnement en stuur je bestelling in 1 tik via WhatsApp.</p>
       </div>
       <div class="how-card">
         <div class="how-num">2</div>
-        <h4>Betaal via WhatsApp</h4>
-        <p>Wij nemen contact op en begeleiden je stap voor stap door de betaling. Veilig en persoonlijk.</p>
+        <h4 data-i18n="how2_h">Betaal via WhatsApp</h4>
+        <p data-i18n="how2_p">Wij nemen contact op en begeleiden je stap voor stap door de betaling. Veilig en persoonlijk.</p>
       </div>
       <div class="how-card">
         <div class="how-num">3</div>
-        <h4>Direct genieten</h4>
-        <p>Na betaling activeren wij alles. Werkt het niet direct? Wij helpen je gratis met de installatie.</p>
+        <h4 data-i18n="how3_h">Direct genieten</h4>
+        <p data-i18n="how3_p">Na betaling activeren wij alles. Werkt het niet direct? Wij helpen je gratis met de installatie.</p>
       </div>
     </div>
   </div>
@@ -746,38 +875,44 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="sh fade-up">
       <span class="sh-label">Reviews</span>
-      <h2>Wat onze klanten zeggen.</h2>
+      <h2 data-i18n="rev_h2">Wat onze klanten zeggen.</h2>
+      <p class="only-nl">Echte WhatsApp-berichten van onze klanten. Namen en nummers laten we weg voor hun privacy. Tik op een bericht om het te vergroten.</p>
     </div>
   </div>
-  <div class="rev-track-wrap fade-up">
+  <!-- NL: echte screenshots (gevuld via script) -->
+  <div class="rev-track-wrap only-nl fade-up">
+    <div class="shots-track" id="shotsTrack"></div>
+  </div>
+  <!-- EN: tekstreviews -->
+  <div class="rev-track-wrap only-en fade-up">
     <div class="rev-track">
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Spotify Duo met mijn lief voor €79/jaar. Wij betaalden dat vroeger per maand!"</p><div class="rev-name">— Bilal, 22</div><div class="rev-age">📍 Amsterdam</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Netflix + IPTV geregeld in 5 minuten via WhatsApp. Top service!"</p><div class="rev-name">— Hicham, 24</div><div class="rev-age">📍 Rotterdam</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Eindelijk Spotify zonder reclame op mijn eigen account. Aanrader 🔥"</p><div class="rev-name">— Yasmin, 20</div><div class="rev-age">📍 Utrecht</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Super vriendelijk geholpen. Alles werkte meteen. 10/10 👌"</p><div class="rev-name">— Maryam, 21</div><div class="rev-age">📍 Den Haag</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Crunchyroll voor bijna niks, alle anime zonder reclame 😍"</p><div class="rev-name">— Boushra, 23</div><div class="rev-age">📍 Antwerpen</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"YouTube Premium is echt een gamechanger. Nooit meer skippen 😭"</p><div class="rev-name">— Nisrine, 19</div><div class="rev-age">📍 Brussel</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"IPTV met alle live sport. Champions League zonder extra betalen 🙌"</p><div class="rev-name">— Jouad, 25</div><div class="rev-age">📍 Eindhoven</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Snel, goedkoop en betrouwbaar. Betaald via PayPal, direct actief."</p><div class="rev-name">— Lukas, 26</div><div class="rev-age">📍 Gent</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Alles via WhatsApp geregeld, heel persoonlijk. Echt een aanrader!"</p><div class="rev-name">— Irma, 27</div><div class="rev-age">📍 Groningen</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Werkt perfect 🔥 Alles op 1 plek, nooit meer losse abonnementen."</p><div class="rev-name">— Lena, 21</div><div class="rev-age">📍 Brugge</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Beste deal ooit. Spotify + YouTube + IPTV voor bijna niks!"</p><div class="rev-name">— Nico, 23</div><div class="rev-age">📍 Tilburg</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"FlixTV is onmisbaar geworden. Alle zenders en sport live."</p><div class="rev-name">— Ahmed, 25</div><div class="rev-age">📍 Mechelen</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"10 minuten en alles werkte. Heel makkelijk geregeld 🙏"</p><div class="rev-name">— Yasmine, 22</div><div class="rev-age">📍 Breda</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r1">"Spotify Duo met mijn lief voor €85/jaar. Wij betaalden dat vroeger per maand!"</p><div class="rev-name">— Bilal, 22</div><div class="rev-age">📍 Amsterdam</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r2">"Netflix + IPTV geregeld in 5 minuten via WhatsApp. Top service!"</p><div class="rev-name">— Hicham, 24</div><div class="rev-age">📍 Rotterdam</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r3">"Eindelijk Spotify zonder reclame op mijn eigen account. Aanrader 🔥"</p><div class="rev-name">— Yasmin, 20</div><div class="rev-age">📍 Utrecht</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r4">"Super vriendelijk geholpen. Alles werkte meteen. 10/10 👌"</p><div class="rev-name">— Maryam, 21</div><div class="rev-age">📍 Den Haag</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r5">"Crunchyroll voor bijna niks, alle anime zonder reclame 😍"</p><div class="rev-name">— Boushra, 23</div><div class="rev-age">📍 Antwerpen</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r6">"YouTube Premium is echt een gamechanger. Nooit meer skippen 😭"</p><div class="rev-name">— Nisrine, 19</div><div class="rev-age">📍 Brussel</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r7">"IPTV met alle live sport. Champions League zonder extra betalen 🙌"</p><div class="rev-name">— Jouad, 25</div><div class="rev-age">📍 Eindhoven</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r8">"Snel, goedkoop en betrouwbaar. Betaald via PayPal, direct actief."</p><div class="rev-name">— Lukas, 26</div><div class="rev-age">📍 Gent</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r9">"Alles via WhatsApp geregeld, heel persoonlijk. Echt een aanrader!"</p><div class="rev-name">— Irma, 27</div><div class="rev-age">📍 Groningen</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r10">"Werkt perfect 🔥 Alles op 1 plek, nooit meer losse abonnementen."</p><div class="rev-name">— Lena, 21</div><div class="rev-age">📍 Brugge</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r11">"Beste deal ooit. Spotify + YouTube + IPTV voor bijna niks!"</p><div class="rev-name">— Nico, 23</div><div class="rev-age">📍 Tilburg</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r12">"FlixTV is onmisbaar geworden. Alle zenders en sport live."</p><div class="rev-name">— Ahmed, 25</div><div class="rev-age">📍 Mechelen</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r13">"10 minuten en alles werkte. Heel makkelijk geregeld 🙏"</p><div class="rev-name">— Yasmine, 22</div><div class="rev-age">📍 Breda</div></div>
       <!-- duplicate for seamless loop -->
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Spotify Duo met mijn lief voor €79/jaar. Wij betaalden dat vroeger per maand!"</p><div class="rev-name">— Bilal, 22</div><div class="rev-age">📍 Amsterdam</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Netflix + IPTV geregeld in 5 minuten via WhatsApp. Top service!"</p><div class="rev-name">— Hicham, 24</div><div class="rev-age">📍 Rotterdam</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Eindelijk Spotify zonder reclame op mijn eigen account. Aanrader 🔥"</p><div class="rev-name">— Yasmin, 20</div><div class="rev-age">📍 Utrecht</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Super vriendelijk geholpen. Alles werkte meteen. 10/10 👌"</p><div class="rev-name">— Maryam, 21</div><div class="rev-age">📍 Den Haag</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Crunchyroll voor bijna niks, alle anime zonder reclame 😍"</p><div class="rev-name">— Boushra, 23</div><div class="rev-age">📍 Antwerpen</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"YouTube Premium is echt een gamechanger. Nooit meer skippen 😭"</p><div class="rev-name">— Nisrine, 19</div><div class="rev-age">📍 Brussel</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"IPTV met alle live sport. Champions League zonder extra betalen 🙌"</p><div class="rev-name">— Jouad, 25</div><div class="rev-age">📍 Eindhoven</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Snel, goedkoop en betrouwbaar. Betaald via PayPal, direct actief."</p><div class="rev-name">— Lukas, 26</div><div class="rev-age">📍 Gent</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Alles via WhatsApp geregeld, heel persoonlijk. Echt een aanrader!"</p><div class="rev-name">— Irma, 27</div><div class="rev-age">📍 Groningen</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Werkt perfect 🔥 Alles op 1 plek, nooit meer losse abonnementen."</p><div class="rev-name">— Lena, 21</div><div class="rev-age">📍 Brugge</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"Beste deal ooit. Spotify + YouTube + IPTV voor bijna niks!"</p><div class="rev-name">— Nico, 23</div><div class="rev-age">📍 Tilburg</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"FlixTV is onmisbaar geworden. Alle zenders en sport live."</p><div class="rev-name">— Ahmed, 25</div><div class="rev-age">📍 Mechelen</div></div>
-      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text">"10 minuten en alles werkte. Heel makkelijk geregeld 🙏"</p><div class="rev-name">— Yasmine, 22</div><div class="rev-age">📍 Breda</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r1">"Spotify Duo met mijn lief voor €85/jaar. Wij betaalden dat vroeger per maand!"</p><div class="rev-name">— Bilal, 22</div><div class="rev-age">📍 Amsterdam</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r2">"Netflix + IPTV geregeld in 5 minuten via WhatsApp. Top service!"</p><div class="rev-name">— Hicham, 24</div><div class="rev-age">📍 Rotterdam</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r3">"Eindelijk Spotify zonder reclame op mijn eigen account. Aanrader 🔥"</p><div class="rev-name">— Yasmin, 20</div><div class="rev-age">📍 Utrecht</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r4">"Super vriendelijk geholpen. Alles werkte meteen. 10/10 👌"</p><div class="rev-name">— Maryam, 21</div><div class="rev-age">📍 Den Haag</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r5">"Crunchyroll voor bijna niks, alle anime zonder reclame 😍"</p><div class="rev-name">— Boushra, 23</div><div class="rev-age">📍 Antwerpen</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r6">"YouTube Premium is echt een gamechanger. Nooit meer skippen 😭"</p><div class="rev-name">— Nisrine, 19</div><div class="rev-age">📍 Brussel</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r7">"IPTV met alle live sport. Champions League zonder extra betalen 🙌"</p><div class="rev-name">— Jouad, 25</div><div class="rev-age">📍 Eindhoven</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r8">"Snel, goedkoop en betrouwbaar. Betaald via PayPal, direct actief."</p><div class="rev-name">— Lukas, 26</div><div class="rev-age">📍 Gent</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r9">"Alles via WhatsApp geregeld, heel persoonlijk. Echt een aanrader!"</p><div class="rev-name">— Irma, 27</div><div class="rev-age">📍 Groningen</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r10">"Werkt perfect 🔥 Alles op 1 plek, nooit meer losse abonnementen."</p><div class="rev-name">— Lena, 21</div><div class="rev-age">📍 Brugge</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r11">"Beste deal ooit. Spotify + YouTube + IPTV voor bijna niks!"</p><div class="rev-name">— Nico, 23</div><div class="rev-age">📍 Tilburg</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r12">"FlixTV is onmisbaar geworden. Alle zenders en sport live."</p><div class="rev-name">— Ahmed, 25</div><div class="rev-age">📍 Mechelen</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="r13">"10 minuten en alles werkte. Heel makkelijk geregeld 🙏"</p><div class="rev-name">— Yasmine, 22</div><div class="rev-age">📍 Breda</div></div>
     </div>
   </div>
 </section>
@@ -785,14 +920,14 @@ img{max-width:100%;display:block}
 <!-- FAQ -->
 <section id="faq" class="faq-sec">
   <div class="container">
-    <div class="sh fade-up"><span class="sh-label">FAQ</span><h2>Veelgestelde vragen.</h2></div>
+    <div class="sh fade-up"><span class="sh-label">FAQ</span><h2 data-i18n="faq_h2">Veelgestelde vragen.</h2></div>
     <div class="faq-list fade-up">
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Hoe werkt IPTV?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>IPTV is televisie via het internet. Je kijkt via een gratis app op je smart tv, telefoon of tablet. Geen schotel, geen decoder, geen gedoe. Wij installeren alles gratis voor je.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Is het direct actief na betaling?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Ja! Na betaling activeren wij alles zo snel mogelijk — in de meeste gevallen binnen enkele minuten. Wij sturen je daarna alle instructies via WhatsApp.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Hoe bestel ik?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Klik op "Toevoegen" bij je gewenste pakket. Er opent een bestelmodal waar je je betaalmethode kiest. Dan stuur je de bestelling via WhatsApp naar ons. Wij begeleiden je verder.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Behoud ik mijn account?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Ja. Voor al onze diensten — Spotify, YouTube, Netflix, Crunchyroll én IPTV — activeren wij alles op jouw eigen account. Jij behoudt volledige controle en niemand anders heeft toegang.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Op welke apparaten werkt het?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>FlixTV werkt op telefoon, tablet, laptop, smart tv en Fire Stick. Wij helpen je gratis met de installatie via WhatsApp — op elk apparaat.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Hoe betaal ik?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p>Betaling gaat via WhatsApp — PayPal, bankoverschrijving of Paysafecard. Geen automatische domiciliëring, geen verrassingen. Eenmalige betaling voor 12 maanden.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="q1">Hoe werkt IPTV?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p data-i18n="a1">IPTV is televisie via het internet. Je kijkt via een gratis app op je smart tv, telefoon of tablet. Geen schotel, geen decoder, geen gedoe. Wij installeren alles gratis voor je.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="q2">Is het direct actief na betaling?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p data-i18n="a2">Ja! Na betaling activeren wij alles zo snel mogelijk — in de meeste gevallen binnen enkele minuten. Wij sturen je daarna alle instructies via WhatsApp.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="q3">Hoe bestel ik?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p data-i18n="a3">Klik op "Toevoegen" bij je gewenste pakket. Er opent een bestelmodal waar je je betaalmethode kiest. Dan stuur je de bestelling via WhatsApp naar ons. Wij begeleiden je verder.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="q4">Behoud ik mijn account?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p data-i18n="a4">Ja. Voor al onze diensten — Spotify, YouTube, Netflix, Crunchyroll én IPTV — activeren wij alles op jouw eigen account. Jij behoudt volledige controle en niemand anders heeft toegang.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="q5">Op welke apparaten werkt het?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p data-i18n="a5">FlixTV werkt op telefoon, tablet, laptop, smart tv en Fire Stick. Wij helpen je gratis met de installatie via WhatsApp — op elk apparaat.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-i18n="q6">Hoe betaal ik?</span><i class="fas fa-plus"></i></button><div class="faq-a"><p data-i18n="a6">Betaling gaat via WhatsApp — PayPal, bankoverschrijving of Paysafecard. Geen automatische domiciliëring, geen verrassingen. Eenmalige betaling voor 12 maanden.</p></div></div>
     </div>
   </div>
 </section>
@@ -805,27 +940,27 @@ img{max-width:100%;display:block}
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="logo"><div class="logo-mark"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="34,28 34,72 66,50" fill="#fff"/><path d="M70 38 A18 18 0 0 1 70 62" stroke="rgba(255,255,255,.85)" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M79 29 A31 31 0 0 1 79 71" stroke="rgba(255,255,255,.5)" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div><div class="logo-name">Flix<em>TV</em></div></div>
-        <p>Premium streaming voor een eerlijke prijs. Direct actief via WhatsApp.</p>
+        <p data-i18n="foot_p">Premium streaming voor een eerlijke prijs. Direct actief via WhatsApp.</p>
       </div>
       <div class="footer-links">
-        <a href="#pakketten">Pakketten</a>
-        <a href="#werkwijze">Hoe het werkt</a>
+        <a href="#pakketten" data-i18n="foot_pkg">Pakketten</a>
+        <a href="#werkwijze" data-i18n="foot_how">Hoe het werkt</a>
         <a href="#faq">FAQ</a>
       </div>
-      <a href="https://wa.me/32495994547" class="footer-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp ons</a>
+      <a href="https://wa.me/32495994547" class="footer-wa" target="_blank" data-i18n="foot_wa"><i class="fab fa-whatsapp"></i> WhatsApp ons</a>
     </div>
-    <div class="footer-bottom">© 2025 FlixTV. Alle prijzen zijn eenmalig voor 12 maanden.</div>
+    <div class="footer-bottom" data-i18n="foot_bottom">© 2025 FlixTV. Alle prijzen zijn eenmalig voor 12 maanden.</div>
   </div>
 </footer>
 
 <!-- WA / OFFER FLOAT -->
 <div class="wa-stack">
-  <div class="offer-cta" onclick="document.getElementById('pakketten').scrollIntoView({behavior:'smooth'})">
+  <div class="offer-cta" onclick="document.getElementById('pakketten').scrollIntoView({behavior:'smooth'})" data-i18n="offer_cta">
     Bestellen? Ons aanbod <i class="fas fa-arrow-right"></i>
   </div>
   <div class="wa-row">
-    <div class="wa-label">Vragen of problemen?<br><b>Contacteer ons</b></div>
-    <a href="https://wa.me/32495994547?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20FlixTV!" class="wa-float" target="_blank" aria-label="WhatsApp">
+    <div class="wa-label" data-i18n="wa_label">Vragen of problemen?<br><b>Contacteer ons</b></div>
+    <a id="waFloat" href="https://wa.me/32495994547?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20FlixTV!" class="wa-float" target="_blank" aria-label="WhatsApp">
       <i class="fab fa-whatsapp"></i><span class="wa-pulse"></span>
     </a>
   </div>
@@ -833,28 +968,42 @@ img{max-width:100%;display:block}
 
 <div id="toast" class="toast"></div>
 
+<!-- REVIEW SCREENSHOT VERGROTING -->
+<div id="shotBox" class="shot-box" style="display:none"><img id="shotBoxImg" alt="WhatsApp-bericht van een klant"></div>
+
+<!-- LANGUAGE PICKER -->
+<div id="langModal" class="lang-ov" style="display:none">
+  <div class="lang-box">
+    <img src="logo-mark.svg" alt="" class="lang-logo">
+    <h2>Kies je taal</h2>
+    <p>Choose your language</p>
+    <button type="button" class="lang-opt" data-lang="nl"><span class="lang-code">NL</span> Nederlands</button>
+    <button type="button" class="lang-opt" data-lang="en"><span class="lang-code">EN</span> English</button>
+  </div>
+</div>
+
 <!-- CHECKOUT MODAL -->
 <div id="coModal" class="mov" style="display:none">
   <div class="mbox">
     <div class="mhead"><h2 id="coTitle">Bestellen</h2><button id="coClose" class="mclose">&times;</button></div>
     <div class="mbody">
-      <div class="co-lbl"><span class="co-step">1</span> Kies je abonnement</div>
+      <div class="co-lbl" data-i18n="co_step1"><span class="co-step">1</span> Kies je abonnement</div>
       <div class="co-tiers" id="coTiers"></div>
       <div class="co-addon" id="coAddon">
         <label>
           <input type="checkbox" id="coAddonChk">
-          <div><div class="ca-txt">➕ Voeg IPTV toe — <span class="ca-price">€55</span></div><div class="ca-sub">25.000+ zenders, alle live sport & 69.000+ films/series</div></div>
+          <div><div class="ca-txt" data-i18n="co_addon">➕ Voeg IPTV toe — <span class="ca-price">€70</span></div><div class="ca-sub" data-i18n="co_addon_sub">25.000+ zenders, alle live sport & 69.000+ films/series</div></div>
         </label>
       </div>
-      <div class="co-lbl"><span class="co-step">2</span> Betaalmethode</div>
+      <div class="co-lbl" data-i18n="co_step2"><span class="co-step">2</span> Betaalmethode</div>
       <div class="pay-opts">
         <label class="popt"><input type="radio" name="pay" value="PayPal" checked><i class="fab fa-paypal"></i> PayPal</label>
-        <label class="popt"><input type="radio" name="pay" value="Bankoverschrijving"><i class="fas fa-university"></i> Bankoverschrijving</label>
+        <label class="popt"><input type="radio" name="pay" value="Bankoverschrijving"><i class="fas fa-university"></i> <span data-i18n="pay_bank">Bankoverschrijving</span></label>
         <label class="popt"><input type="radio" name="pay" value="Paysafecard"><i class="fas fa-ticket-alt"></i> Paysafecard</label>
       </div>
-      <div class="co-total"><span>Totaal</span><strong id="coTotal">€0,00</strong></div>
-      <button id="coSend" class="m-send"><i class="fab fa-whatsapp"></i> Stuur bestelling via WhatsApp</button>
-      <div class="m-note">✅ Bespaar slim &nbsp;•&nbsp; ✅ Gratis installatiehulp</div>
+      <div class="co-total"><span data-i18n="co_total">Totaal</span><strong id="coTotal">€0,00</strong></div>
+      <button id="coSend" class="m-send" data-i18n="co_send"><i class="fab fa-whatsapp"></i> Stuur bestelling via WhatsApp</button>
+      <div class="m-note" data-i18n="co_note">✅ Bespaar slim &nbsp;•&nbsp; ✅ Gratis installatiehulp</div>
     </div>
   </div>
 </div>
@@ -862,7 +1011,136 @@ img{max-width:100%;display:block}
 <script>
 'use strict';
 const WA='32495994547';
-const IPTV_ADDON=55;
+const IPTV_ADDON=70;
+
+/* ── TAAL / LANGUAGE ──
+   Nederlands staat in de HTML zelf; hieronder de Engelse versie per data-i18n sleutel. */
+const I18N_EN={
+  nav_offer:'Plans',
+  nav_how:'How it works',
+  hero_eyebrow:'Europe &amp; UK',
+  hero_intro:'All your streaming in <strong>one place</strong>, for less. See how it works 👇',
+  ht_tag:'How it works',
+  ht_title:'Order in 4 steps',
+  ht1:'Pick your service and tap <b>Get</b>',
+  ht1_btn:'Get Spotify Premium',
+  ht2:'Choose your plan',
+  ht_ind:'Individual',
+  ht3:'Choose your payment method',
+  ht4:'Send your order to WhatsApp',
+  ht4_btn:'Send order via WhatsApp',
+  ht_foot:'<i class="fab fa-whatsapp"></i><span>From there our colleague takes over and helps you with <b>payment</b> and <b>activation</b>. Everything happens right in WhatsApp.</span>',
+  pkg_label:'Our plans',
+  pkg_h2:'Pick your service.<br>Pick your plan.',
+  pkg_p:'Tap a service, choose your plan and payment method — and order in 1 tap via WhatsApp.',
+  deal_sub:'Spotify, YouTube Premium and Netflix together, 12 months on your own account',
+  deal_sp:'<i class="fab fa-spotify" style="color:#1DB954"></i>Spotify <b>Individual</b>',
+  deal_yt:'<i class="fab fa-youtube" style="color:#FF0000"></i>YouTube <b>Individual</b>',
+  deal_per:'/ 12 months',
+  deal_save:'Save €300+',
+  deal_btn:'<i class="fas fa-shopping-bag"></i> Get the Special Offer',
+  sp_sub:'Unlimited ad-free listening on your own account',
+  sp_ind:'Individual <b>€55</b>',
+  sp_btn:'<i class="fas fa-shopping-bag"></i> Get Spotify Premium',
+  yt_sub:'No more ads — background play &amp; downloads',
+  yt_ind:'Individual <b>€59</b>',
+  yt_fam:'Family <b>€119</b>',
+  yt_btn:'<i class="fas fa-shopping-bag"></i> Get YouTube Premium',
+  nf_sub:'Movies, series &amp; originals — in HD/4K on your own account',
+  nf_btn:'<i class="fas fa-shopping-bag"></i> Get Netflix',
+  iptv_sub:'25,000+ channels, all live sports &amp; 69,000+ movies/series',
+  months12:'12 months',
+  iptv_btn:'<i class="fas fa-shopping-bag"></i> Get IPTV',
+  cr_sub:'All anime, simulcasts &amp; manga, ad-free',
+  cr_btn:'<i class="fas fa-shopping-bag"></i> Get Crunchyroll',
+  how_label:'How it works',
+  how_h2:'Active in 3 steps.',
+  how_p:'From order to activation — we guide you personally via WhatsApp.',
+  how1_h:'Pick your package',
+  how1_p:'Tap a service, choose your plan and send your order in 1 tap via WhatsApp.',
+  how2_h:'Pay via WhatsApp',
+  how2_p:'We get in touch and guide you through the payment step by step. Safe and personal.',
+  how3_h:'Enjoy right away',
+  how3_p:'After payment we activate everything. Not working straight away? We help you set it up for free.',
+  rev_h2:'What our customers say.',
+  r1:'"Spotify Duo with my partner for €85/year. We used to pay that every month!"',
+  r2:'"Netflix + IPTV sorted in 5 minutes via WhatsApp. Great service!"',
+  r3:'"Finally Spotify without ads on my own account. Highly recommend 🔥"',
+  r4:'"Super friendly help. Everything worked right away. 10/10 👌"',
+  r5:'"Crunchyroll for next to nothing, all anime without ads 😍"',
+  r6:'"YouTube Premium is a real game changer. No more skipping 😭"',
+  r7:'"IPTV with all live sports. Champions League without paying extra 🙌"',
+  r8:'"Fast, cheap and reliable. Paid with PayPal, active right away."',
+  r9:'"Everything arranged via WhatsApp, very personal. Highly recommended!"',
+  r10:'"Works perfectly 🔥 Everything in one place, no more separate subscriptions."',
+  r11:'"Best deal ever. Spotify + YouTube + IPTV for next to nothing!"',
+  r12:'"Can\'t live without FlixTV anymore. All channels and sports live."',
+  r13:'"10 minutes and everything worked. Really easy 🙏"',
+  faq_h2:'Frequently asked questions.',
+  q1:'How does IPTV work?',
+  a1:'IPTV is television over the internet. You watch through a free app on your smart TV, phone or tablet. No dish, no decoder, no hassle. We install everything for you for free.',
+  q2:'Is it active right after payment?',
+  a2:'Yes! After payment we activate everything as fast as possible — in most cases within a few minutes. We then send you all instructions via WhatsApp.',
+  q3:'How do I order?',
+  a3:'Tap the button of the package you want. An order window opens where you choose your plan and payment method. Then you send the order to us via WhatsApp and we guide you from there.',
+  q4:'Do I keep my own account?',
+  a4:'Yes. For all our services — Spotify, YouTube, Netflix, Crunchyroll and IPTV — we activate everything on your own account. You keep full control and nobody else has access.',
+  q5:'Which devices does it work on?',
+  a5:'FlixTV works on phone, tablet, laptop, smart TV and Fire Stick. We help you install it for free via WhatsApp — on any device.',
+  q6:'How do I pay?',
+  a6:'Payment goes through WhatsApp — PayPal, bank transfer or Paysafecard. No direct debit, no surprises. One-time payment for 12 months.',
+  foot_p:'Premium streaming at a fair price. Activated right away via WhatsApp.',
+  foot_pkg:'Packages',
+  foot_how:'How it works',
+  foot_wa:'<i class="fab fa-whatsapp"></i> WhatsApp us',
+  foot_bottom:'© 2025 FlixTV. All prices are one-time for 12 months.',
+  offer_cta:'Want to order? Our plans <i class="fas fa-arrow-right"></i>',
+  wa_label:'Questions or problems?<br><b>Contact us</b>',
+  co_step1:'<span class="co-step">1</span> Choose your plan',
+  co_step2:'<span class="co-step">2</span> Payment method',
+  co_addon:'➕ Add IPTV — <span class="ca-price">€70</span>',
+  co_addon_sub:'25,000+ channels, all live sports &amp; 69,000+ movies/series',
+  pay_bank:'Bank transfer',
+  co_total:'Total',
+  co_send:'<i class="fab fa-whatsapp"></i> Send order via WhatsApp',
+  co_note:'✅ Save smart &nbsp;•&nbsp; ✅ Free setup help',
+};
+const LANG_KEY='flixtv-lang';
+const NL_HTML=new WeakMap();
+let LANG='nl';
+const tr=(nl,en)=>LANG==='en'?en:nl;
+
+function applyLang(lang){
+  LANG=lang==='en'?'en':'nl';
+  document.documentElement.lang=LANG;
+  document.title=tr('FlixTV — Alles wat je wil kijken op 1 plek','FlixTV — Everything you want to watch in one place');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    if(!NL_HTML.has(el))NL_HTML.set(el,el.innerHTML);
+    el.innerHTML=(LANG==='en'&&I18N_EN[el.dataset.i18n])||NL_HTML.get(el);
+  });
+  document.querySelectorAll('.lang-switch [data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===LANG));
+  const wa=document.getElementById('waFloat');
+  if(wa)wa.href=`https://wa.me/${WA}?text=${encodeURIComponent(tr('Hallo, ik heb een vraag over FlixTV!','Hi, I have a question about FlixTV!'))}`;
+}
+function setLang(lang){
+  applyLang(lang);
+  try{localStorage.setItem(LANG_KEY,LANG);}catch(e){}
+  document.getElementById('langModal').style.display='none';
+  document.body.style.overflow='';
+}
+document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+(()=>{
+  // ?lang=en in de link opent meteen de Engelse versie
+  const urlLang=new URLSearchParams(location.search).get('lang');
+  let saved=null;
+  try{saved=localStorage.getItem(LANG_KEY);}catch(e){}
+  const lang=(urlLang==='nl'||urlLang==='en')?urlLang:saved;
+  applyLang(lang||'nl');
+  if(!lang){
+    document.getElementById('langModal').style.display='flex';
+    document.body.style.overflow='hidden';
+  }
+})();
 
 /* ── HAMBURGER ── */
 const hbgBtn=document.getElementById('hbgBtn'),navLinks=document.getElementById('navLinks');
@@ -893,7 +1171,7 @@ const secObs=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:.3,rootMargin:'-100px 0px -50% 0px'});
-['sec-spotify','sec-youtube','sec-netflix','sec-iptv','sec-crunchyroll'].forEach(id=>{const el=document.getElementById(id);if(el)secObs.observe(el);});
+['sec-deal','sec-spotify','sec-youtube','sec-netflix','sec-iptv','sec-crunchyroll'].forEach(id=>{const el=document.getElementById(id);if(el)secObs.observe(el);});
 
 /* ── SOCIAL PROOF TICKER (optioneel element) ── */
 const spMsgs=['Lena uit Antwerpen bestelde 3 minuten geleden','Nico uit Gent test nu gratis','Yasmine uit Brussel bestelde zojuist','Jonas uit Leuven bestelde 8 minuten geleden','Bilal uit Brugge bestelde 5 minuten geleden','Sara uit Mechelen bestelde 2 minuten geleden','Ahmed uit Hasselt test nu gratis','Hicham uit Amsterdam bestelde 6 minuten geleden','Maroua uit Utrecht bestelde zojuist','Meryem uit Breda test nu gratis','Yassin uit Rotterdam bestelde 4 minuten geleden','Souad uit Den Haag bestelde 9 minuten geleden','Karim uit Eindhoven test nu gratis'];
@@ -906,32 +1184,34 @@ setInterval(()=>{
 
 /* ── SERVICES DATA ── */
 const SERVICES={
+  deal:{label:'Special Offer',tiers:[
+    {name:'Spotify Individueel + YouTube Individueel + Netflix Basic HD',nameEn:'Spotify Individual + YouTube Individual + Netflix Basic HD',price:150,sub:'3 diensten · 12 maanden',subEn:'3 services · 12 months',best:true},
+  ]},
   spotify:{label:'Spotify Premium',tiers:[
-    {name:'Solo',price:49,sub:'1 account · 12 maanden'},
-    {name:'Duo',price:79,sub:'2 accounts · 12 maanden',pop:true},
-    {name:'Trio',price:89,sub:'3 accounts · 12 maanden',best:true},
+    {name:'Individueel',nameEn:'Individual',price:55,sub:'1 account · 12 maanden',subEn:'1 account · 12 months'},
+    {name:'Duo',price:85,sub:'2 accounts · 12 maanden',subEn:'2 accounts · 12 months',pop:true},
+    {name:'Trio',price:99,sub:'3 accounts · 12 maanden',subEn:'3 accounts · 12 months',best:true},
   ]},
   youtube:{label:'YouTube Premium',tiers:[
-    {name:'Individueel',price:49,sub:'1 account · 12 maanden'},
-    {name:'Duo',price:79,sub:'2 accounts · 12 maanden',pop:true},
-    {name:'Familie',price:119,sub:'6 accounts · 12 maanden',best:true},
+    {name:'Individueel',nameEn:'Individual',price:59,sub:'1 account · 12 maanden',subEn:'1 account · 12 months'},
+    {name:'Duo',price:89,sub:'2 accounts · 12 maanden',subEn:'2 accounts · 12 months',pop:true},
+    {name:'Familie',nameEn:'Family',price:119,sub:'6 accounts · 12 maanden',subEn:'6 accounts · 12 months',best:true},
   ]},
   netflix:{label:'Netflix',tiers:[
-    {name:'Mobile',price:55,sub:'1 scherm · SD'},
-    {name:'Basic HD',price:69,sub:'1 scherm · HD'},
-    {name:'Standard',price:89,sub:'2 schermen · Full HD',pop:true},
-    {name:'Premium',price:119,sub:'4 schermen · 4K + HDR',best:true},
+    {name:'Basic HD',price:69,sub:'1 scherm · HD · 12 maanden',subEn:'1 screen · HD · 12 months'},
+    {name:'Standard',price:89,sub:'2 schermen · Full HD · 12 maanden',subEn:'2 screens · Full HD · 12 months',pop:true},
+    {name:'Premium',price:119,sub:'4 schermen · 4K + HDR · 12 maanden',subEn:'4 screens · 4K + HDR · 12 months',best:true},
   ]},
   iptv:{label:'IPTV',tiers:[
-    {name:'Premium',price:75,sub:'25.000+ zenders · live sport · 12 maanden',pop:true},
+    {name:'Premium',price:75,sub:'25.000+ zenders · live sport · 12 maanden',subEn:'25,000+ channels · live sports · 12 months',pop:true},
   ]},
   crunchyroll:{label:'Crunchyroll',tiers:[
-    {name:'Fan',price:30,sub:'1 apparaat · 12 maanden'},
-    {name:'Mega Fan',price:35,sub:'meerdere apparaten · 12 maanden',best:true},
+    {name:'Mega Fan',price:35,sub:'meerdere apparaten · 12 maanden',subEn:'multiple devices · 12 months',pop:true},
   ]},
 };
 
-const eur=n=>'€'+n.toFixed(2).replace('.',',');
+const eur=n=>'€'+(LANG==='en'?n.toFixed(2):n.toFixed(2).replace('.',','));
+const tierLabel=t=>tr(t.name,t.nameEn||t.name);
 let coState={svc:null,tierIdx:0};
 
 /* ── OPEN CHECKOUT ── */
@@ -941,14 +1221,14 @@ function openCheckout(svcKey,tierName){
   if(idx<0)idx=svc.tiers.findIndex(t=>t.pop);
   if(idx<0)idx=0;
   coState={svc:svcKey,tierIdx:idx};
-  document.getElementById('coTitle').textContent=svc.label+' bestellen';
+  document.getElementById('coTitle').textContent=tr(svc.label+' bestellen','Order '+svc.label);
   const wrap=document.getElementById('coTiers');
   wrap.innerHTML=svc.tiers.map((t,i)=>`
     <label class="co-tier${i===idx?' sel':''}">
       <input type="radio" name="coTier" value="${i}" ${i===idx?'checked':''}>
       <div style="flex:1">
-        <div class="co-tier-name">${t.name}${t.pop?' ⭐':''}${t.best?' <span class="co-best">Voordeligst</span>':''}</div>
-        <div class="co-tier-sub">${t.sub}</div>
+        <div class="co-tier-name">${tierLabel(t)}${t.pop?' ⭐':''}${t.best?` <span class="co-best">${tr('Voordeligst','Best value')}</span>`:''}</div>
+        <div class="co-tier-sub">${tr(t.sub,t.subEn||t.sub)}</div>
       </div>
       <div style="text-align:right"><span class="co-tier-price">${eur(t.price)}</span></div>
     </label>`).join('');
@@ -992,16 +1272,38 @@ document.querySelectorAll('.add-to-cart').forEach(btn=>{
 document.getElementById('coSend')?.addEventListener('click',()=>{
   const svc=SERVICES[coState.svc];if(!svc)return;
   const tier=svc.tiers[coState.tierIdx];
-  const pay=document.querySelector('input[name="pay"]:checked')?.value||'PayPal';
+  const pay=document.querySelector('input[name="pay"]:checked')?.closest('label')?.textContent.trim()||'PayPal';
   const chk=document.getElementById('coAddonChk');
   const addon=(chk && chk.checked && coState.svc!=='iptv');
   let total=tier.price+(addon?IPTV_ADDON:0);
-  let msg=`👋 Hallo! Ik wil graag bestellen:\n\n📦 *Dienst:* ${svc.label}\n🎯 *Abonnement:* ${tier.name} — ${eur(tier.price)}\n`;
+  let msg=tr(
+    `👋 Hallo! Ik wil graag bestellen:\n\n📦 *Dienst:* ${svc.label}\n🎯 *Abonnement:* ${tierLabel(tier)} — ${eur(tier.price)}\n`,
+    `👋 Hi! I'd like to order:\n\n📦 *Service:* ${svc.label}\n🎯 *Plan:* ${tierLabel(tier)} — ${eur(tier.price)}\n`);
   if(addon)msg+=`➕ *Extra:* FlixTV IPTV — ${eur(IPTV_ADDON)}\n`;
-  msg+=`\n💰 *Totaal:* ${eur(total)}\n💳 *Betaling:* ${pay}\n\nGraag hoor ik hoe ik verder kan. Bedankt!`;
+  msg+=tr(
+    `\n💰 *Totaal:* ${eur(total)}\n💳 *Betaling:* ${pay}\n\nGraag hoor ik hoe ik verder kan. Bedankt!`,
+    `\n💰 *Total:* ${eur(total)}\n💳 *Payment:* ${pay}\n\nPlease let me know how to continue. Thanks!`);
   window.open(`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`,'_blank');
-  closeCheckout();showToast('✅ Doorgestuurd naar WhatsApp!');
+  closeCheckout();showToast(tr('✅ Doorgestuurd naar WhatsApp!','✅ Sent to WhatsApp!'));
 });
+
+/* ── REVIEW SCREENSHOTS (alleen NL) ──
+   Bestanden staan in reviews/review-01.jpg t/m review-XX.jpg; verhoog REVIEW_SHOTS bij nieuwe. */
+const REVIEW_SHOTS=12;
+const shotsTrack=document.getElementById('shotsTrack');
+const shotBox=document.getElementById('shotBox');
+if(shotsTrack){
+  const cards=Array.from({length:REVIEW_SHOTS},(_,i)=>
+    `<button type="button" class="shot"><img src="reviews/review-${String(i+1).padStart(2,'0')}.jpg" alt="WhatsApp-bericht van een klant"></button>`).join('');
+  shotsTrack.innerHTML=cards+cards; // dubbel voor naadloze loop
+  shotsTrack.addEventListener('click',e=>{
+    const img=e.target.closest('.shot')?.querySelector('img');if(!img)return;
+    document.getElementById('shotBoxImg').src=img.src;
+    shotBox.style.display='flex';
+  });
+}
+shotBox?.addEventListener('click',()=>{shotBox.style.display='none';});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&shotBox)shotBox.style.display='none';});
 
 /* ── FAQ ── */
 document.querySelectorAll('.faq-q').forEach(btn=>{
